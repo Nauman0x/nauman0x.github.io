@@ -4,7 +4,7 @@ import { Briefcase, Calendar, MapPin, CheckCircle2, ExternalLink } from 'lucide-
 import { CompanyLogo } from './CompanyLogo';
 import { Reveal } from './Reveal';
 
-const ACCENTS = ['#4D7CFE', '#FF5FA2', '#8FD14F'];
+const ACCENTS = ['#3A5FE0', '#E0397E', '#6CAE34'];
 
 const renderHighlight = (text: string, accent: string) => {
   const parts = text.split(/(\*\*.+?\*\*)/g);
