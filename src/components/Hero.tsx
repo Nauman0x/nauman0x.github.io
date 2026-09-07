@@ -106,7 +106,7 @@ export const Hero: React.FC = () => {
                     src={avatarPhoto}
                     alt="Nauman Arif"
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: '48% 22%' }}
+                    style={{ objectPosition: '37% 26%' }}
                   />
                 </div>
                 <div className="mt-3 flex items-center justify-between font-mono text-[11px] font-bold uppercase tracking-wide text-white">
