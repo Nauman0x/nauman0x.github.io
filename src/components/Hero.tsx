@@ -110,7 +110,10 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Availability tag */}
-              <div className="absolute -bottom-3 left-3 px-2.5 py-1 bg-white border-2 border-black text-[10px] font-mono font-bold text-black -rotate-3 shadow-[2px_2px_0_0_#000000]">
+              <div
+                style={{ top: '330px', left: '12px' }}
+                className="absolute px-2.5 py-1 bg-white border-2 border-black text-[10px] font-mono font-bold text-black -rotate-3 shadow-[2px_2px_0_0_#000000] z-10"
+              >
                 REMOTE &middot; WORLDWIDE
               </div>
 
