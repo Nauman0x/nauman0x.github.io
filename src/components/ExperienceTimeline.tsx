@@ -1,6 +1,7 @@
 import React from 'react';
 import { EXPERIENCES } from '../data/portfolioData';
 import { Briefcase, Calendar, MapPin, CheckCircle2, ExternalLink } from 'lucide-react';
+import { CompanyLogo } from './CompanyLogo';
 
 const ACCENTS = ['#4D7CFE', '#FF5FA2', '#8FD14F'];
 
@@ -31,24 +32,27 @@ export const ExperienceTimeline: React.FC = () => {
                 className="p-6 sm:p-8 bg-[#F5F0E4] border-[3px] border-black transition-all duration-200 group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4 pb-4 border-b-2 border-black/10">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-black text-black">
-                      {exp.role}
-                    </h3>
-                    <div className="text-sm font-mono font-bold mt-0.5 flex items-center gap-1.5" style={{ color: accent }}>
-                      {exp.website ? (
-                        <a
-                          href={exp.website}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="hover:underline flex items-center gap-1"
-                        >
+                  <div className="flex items-start gap-3.5">
+                    <CompanyLogo company={exp.company} />
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-black text-black">
+                        {exp.role}
+                      </h3>
+                      <div className="text-sm font-mono font-bold mt-0.5 flex items-center gap-1.5" style={{ color: accent }}>
+                        {exp.website ? (
+                          <a
+                            href={exp.website}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:underline flex items-center gap-1"
+                          >
+                            <span>{exp.company}</span>
+                            <ExternalLink className="h-3.5 w-3.5" />
+                          </a>
+                        ) : (
                           <span>{exp.company}</span>
-                          <ExternalLink className="h-3.5 w-3.5" />
-                        </a>
-                      ) : (
-                        <span>{exp.company}</span>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </div>
 
