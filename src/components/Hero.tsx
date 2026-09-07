@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
 
             <h1 className="leading-[0.95] mb-4 font-heading">
               <span
-                className="block text-5xl sm:text-6xl lg:text-7xl font-black text-transparent tracking-tight"
+                className="block text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tight"
                 style={{ WebkitTextStroke: '2px #111111' }}
               >
                 NAUMAN
@@ -153,7 +153,7 @@ export const Hero: React.FC = () => {
               <span>IDEMPOTENT BILLING</span>
             </div>
             <div className="text-sm sm:text-base font-mono font-bold text-black">5 EU Countries</div>
-            <div className="text-[11px] font-mono text-[#5C5648]">92% Payment Collection</div>
+            <div className="text-[11px] font-mono text-[#5C5648]">100% Payment Collection</div>
           </div>
 
           <div className="px-3 pt-2 md:pt-0">
