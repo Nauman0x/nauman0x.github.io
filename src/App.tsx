@@ -4,7 +4,6 @@ import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
 import { MetricsRibbon } from './components/MetricsRibbon';
 import { ProjectsSection } from './components/ProjectsSection';
-import { VoiceStudio } from './components/VoiceStudio';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
 import { Certificates } from './components/Certificates';
 import { ResearchExplorer } from './components/ResearchExplorer';
@@ -48,9 +47,6 @@ export function App() {
 
         {/* Flagship & Systems Projects with Filter Tabs & Slide-over Drawer */}
         <ProjectsSection />
-
-        {/* Interactive Voice Call & Speech Lab */}
-        <VoiceStudio />
 
         {/* Empirical Research Paper Explorer (Urban Coexistence Study N=406) */}
         <ResearchExplorer />

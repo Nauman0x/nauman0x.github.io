@@ -247,7 +247,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'prompt-portfolio',
-    title: 'Conversational Voice AI Agent Portfolio',
+    title: 'Conversational Voice AI Agent Prompt Portfolio',
     subtitle: 'Production Prompt Systems & Live Call Audio Recordings',
     category: 'voice',
     tags: ['Voice AI', 'STT/TTS', 'Prompt Engineering', 'IVR Triage', 'Call Recordings'],
