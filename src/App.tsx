@@ -8,6 +8,7 @@ import { VoiceStudio } from './components/VoiceStudio';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
 import { ResearchExplorer } from './components/ResearchExplorer';
 import { TerminalHUD } from './components/TerminalHUD';
+import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
 const TICKER_ITEMS = [
@@ -52,6 +53,9 @@ export function App() {
 
         {/* Interactive Terminal Command HUD */}
         <TerminalHUD />
+
+        {/* Contact / Let's Talk */}
+        <Contact />
       </main>
 
       {/* Footer */}

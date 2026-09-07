@@ -20,6 +20,7 @@ export const Navbar: React.FC = () => {
     { name: '03. Voice AI', href: '#voice' },
     { name: '04. Research', href: '#research' },
     { name: '05. Console', href: '#console' },
+    { name: '06. Contact', href: '#contact' },
   ];
 
   return (
