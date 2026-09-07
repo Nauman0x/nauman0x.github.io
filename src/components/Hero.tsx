@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
               >
                 NAUMAN
               </span>
-              <span className="inline-block text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tight bg-[#FFC300] border-[3px] border-black px-3 mt-2 shadow-[6px_6px_0_0_#000000]">
+              <span className="inline-block text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tight bg-[#FFC300] border-[3px] border-black px-3 -mt-3 shadow-[6px_6px_0_0_#000000]">
                 ARIF.
               </span>
             </h1>
