@@ -1,30 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Award, Bot, Sparkles, ShieldCheck, Activity, UserRound, Zap, ArrowUpRight } from 'lucide-react';
 
 const STAR_CLIP =
   'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
 
 export const Hero: React.FC = () => {
-  const [timeStr, setTimeStr] = useState('');
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      // Format time in Asia/Karachi (PKT)
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone: 'Asia/Karachi',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false,
-      };
-      setTimeStr(new Intl.DateTimeFormat('en-GB', options).format(now));
-    };
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -123,9 +103,9 @@ export const Hero: React.FC = () => {
                 </div>
               </div>
 
-              {/* Location tag */}
+              {/* Availability tag */}
               <div className="absolute -bottom-3 left-3 px-2.5 py-1 bg-white border-2 border-black text-[10px] font-mono font-bold text-black -rotate-3 shadow-[2px_2px_0_0_#000000]">
-                LAHORE, PK &middot; UTC+5
+                REMOTE &middot; WORLDWIDE
               </div>
 
               {/* Starburst badge */}
@@ -148,9 +128,9 @@ export const Hero: React.FC = () => {
             </div>
             <div className="text-sm sm:text-base font-mono font-bold text-black flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#8FD14F] animate-pulse border border-black" />
-              <span>ONLINE &middot; {timeStr || '16:00:00'} PKT</span>
+              <span>ONLINE &amp; SHIPPING</span>
             </div>
-            <div className="text-[11px] font-mono text-[#5C5648]">Lahore, Pakistan</div>
+            <div className="text-[11px] font-mono text-[#5C5648]">Remote &middot; Worldwide</div>
           </div>
 
           <div className="px-3 pt-2 md:pt-0">

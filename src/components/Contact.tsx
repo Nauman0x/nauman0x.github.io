@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2.5">
                   <MapPin className="h-4 w-4 text-[#8FD14F] shrink-0" />
-                  <span>Based in Lahore, Pakistan</span>
+                  <span>Remote &middot; Available Worldwide</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Mail className="h-4 w-4 text-[#8FD14F] shrink-0" />

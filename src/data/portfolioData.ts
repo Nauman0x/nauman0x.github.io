@@ -347,23 +347,74 @@ export const AUDIO_SAMPLES: AudioSample[] = [
   }
 ];
 
-export const RESEARCH_PAPER = {
-  title: 'Strategies for Co-existence of Stray Animals and Humans in Urban Areas',
-  authors: ['Nauman Arif (Lead Author)', 'Khadeja Masood', 'Ashna Masood', 'Faisal Bukhari'],
-  institution: 'Information Technology University (ITU) & University of the Punjab, Lahore',
-  status: 'Completed Working Paper & Empirical Research Study',
-  sampleSize: 'N = 406 Urban Citizens',
-  abstract: 'Urbanization in Pakistan at a rapid rate has increased human-stray animal interaction pressures, and traditional methods of culling have been both inhumane and ineffective. This study analyzes public attitudes toward stray animals and evaluates sustainable choices, given Trap-Neuter-Vaccinate-Release (TNVR) as a viable alternative. Synthesizing an empirical survey of N=406 participants with international comparative frameworks, we model intervention preferences and social impediments to humane control.',
-  keyStats: [
-    { label: 'Sample Population', value: 'N = 406', note: 'Surveyed across urban centers' },
-    { label: 'Chi-Square Significance', value: 'χ² = 36.19', note: 'p = 0.0027 (Interaction vs Perception)' },
-    { label: 'PCA Principal Component 1', value: '44.4%', note: 'Single factor dominant intervention preference' },
-    { label: 'Community Rejection of Culling', value: '99.8%', note: 'Mass culling rejected (1 vote out of 406)' }
-  ],
-  insights: [
-    'Direct exposure correlates with positive attitudes: Citizens with daily/weekly interaction overwhelmingly view strays as harmless (p < 0.001).',
-    'Mistreatment cited far more than disease (71.4% vs 14.8%, Z = 16.30) as the primary root cause of stray aggression.',
-    'Willingness to financially back TNVR remains remarkably uniform (75%–80%) across all demographic age brackets.',
-    'Informed the product architecture for Paw\'s Pal (AI first-aid and shelter routing).'
-  ]
-};
+export interface ResearchPaper {
+  id: string;
+  title: string;
+  authors: string[];
+  institution: string;
+  status: string;
+  period?: string;
+  sampleSize: string;
+  abstract: string;
+  methodology: string;
+  keyStats: { label: string; value: string; note: string }[];
+  insights: string[];
+  links?: {
+    slides?: string;
+    application?: { label: string; href: string };
+  };
+}
+
+export const RESEARCH_PAPERS: ResearchPaper[] = [
+  {
+    id: 'urban-stray-coexistence',
+    title: 'Strategies for Co-existence of Stray Animals and Humans in Urban Areas',
+    authors: ['Nauman Arif (Lead Author)', 'Khadeja Masood', 'Ashna Masood', 'Faisal Bukhari'],
+    institution: 'Information Technology University (ITU) & University of the Punjab, Lahore',
+    status: 'Completed Working Paper & Empirical Research Study',
+    sampleSize: 'N = 406 Urban Citizens',
+    abstract: 'Urbanization in Pakistan at a rapid rate has increased human-stray animal interaction pressures, and traditional methods of culling have been both inhumane and ineffective. This study analyzes public attitudes toward stray animals and evaluates sustainable choices, given Trap-Neuter-Vaccinate-Release (TNVR) as a viable alternative. Synthesizing an empirical survey of N=406 participants with international comparative frameworks, we model intervention preferences and social impediments to humane control.',
+    methodology: 'Standardized online questionnaire administered across urban citizens (N=406). Evaluated demographics, exposure frequency, perception of stray aggression, and willingness to financially contribute to TNVR campaigns. Analytical techniques: Chi-Square test of independence (χ²=36.19, df=16, p=0.0027) confirming interaction frequency directly predicts perception; collapsed contingency table (χ²=17.48, df=2, p=0.00016, Cramér’s V=0.207); point-biserial correlation for pet ownership (r=-0.401, p<0.001) & Mann-Whitney U test; one-tailed Z-test proving mistreatment is cited significantly more than disease (Z=16.30, McNemar’s χ²=208.10, p<0.001); Principal Component Analysis (PCA) — PC1 alone accounts for 44.4% of variance.',
+    keyStats: [
+      { label: 'Sample Population', value: 'N = 406', note: 'Surveyed across urban centers' },
+      { label: 'Chi-Square Significance', value: 'χ² = 36.19', note: 'p = 0.0027 (Interaction vs Perception)' },
+      { label: 'PCA Principal Component 1', value: '44.4%', note: 'Single factor dominant intervention preference' },
+      { label: 'Community Rejection of Culling', value: '99.8%', note: 'Mass culling rejected (1 vote out of 406)' }
+    ],
+    insights: [
+      'Direct exposure correlates with positive attitudes: Citizens with daily/weekly interaction overwhelmingly view strays as harmless (p < 0.001).',
+      'Mistreatment cited far more than disease (71.4% vs 14.8%, Z = 16.30) as the primary root cause of stray aggression.',
+      'Willingness to financially back TNVR remains remarkably uniform (75%–80%) across all demographic age brackets.',
+      'Informed the product architecture for Paw\'s Pal (AI first-aid and shelter routing).'
+    ],
+    links: {
+      application: { label: 'View Application (Paw\'s Pal)', href: 'https://github.com/Nauman0x/Paw-s-Pal' }
+    }
+  },
+  {
+    id: 'white-collar-crime',
+    title: 'White-Collar Crime: Public Perception, Trust & Socioeconomic Impact',
+    authors: ['Nauman Arif (BSCS23060)', 'Khadija Masood (BSCS23144)', 'Ashna Masood (BSCS23058)'],
+    institution: 'Information Technology University (ITU)',
+    status: 'Completed Statistical Survey Study',
+    period: 'Feb 2024 – May 2024',
+    sampleSize: 'N = 150 Respondents',
+    abstract: 'Analyzes public perception of white-collar crime and its socioeconomic impact on lower-income groups. Conducted statistical surveys to assess public awareness, attitudes toward regulatory bodies, and the influence of bribery-acceptance culture, while evaluating the financial struggles of affected individuals and proposing compensation frameworks.',
+    methodology: 'Structured public survey (N=150; 67 female, 83 male) analyzed with hypothesis testing across multiple dimensions. Techniques: one- and two-tailed Z-score tests on awareness and victim-resource adequacy; Chi-Square tests of independence on ethical-training perception, regulatory confidence vs. proposed solutions, corruption-perception vs. leader choice, and technology\'s link to cyber-enabled white-collar crime (χ²=22.36, df=2, p=0.000014); goodness-of-fit testing on regulatory detection confidence; run test of randomness on gender distribution of respondents.',
+    keyStats: [
+      { label: 'Survey Respondents', value: 'N = 150', note: '67 female · 83 male' },
+      { label: 'Aware of White-Collar Crime', value: '78.1%', note: 'Z-test (two-tailed) — null accepted' },
+      { label: 'Tech / Cyber Fraud Link', value: 'χ² = 22.36', note: 'p = 0.000014 — significant association' },
+      { label: 'Victim Resource Gap', value: '72.9%', note: 'say support for low-income victims is insufficient' }
+    ],
+    insights: [
+      '78.1% of respondents had heard of white-collar crime, yet 72.9% believe there aren\'t enough resources to help low-income victims recover financially.',
+      'Technology and digital platforms show a statistically significant association with cyber fraud and identity-theft-driven white-collar crime (χ² = 22.36, p < 0.001).',
+      'Perception of ethical-training adequacy sits between "neutral" and "believe to some extent," pointing to mixed confidence in institutional safeguards.',
+      'Findings fed into proposed compensation frameworks and support for clearer, less discretionary regulatory law.'
+    ],
+    links: {
+      slides: 'https://docs.google.com/presentation/d/14gerEDg4DY7ZQrTNvcF90SdX0NOiIt-NzqdN9psKClg/edit'
+    }
+  }
+];
