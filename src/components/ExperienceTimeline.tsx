@@ -6,6 +6,19 @@ import { Reveal } from './Reveal';
 
 const ACCENTS = ['#4D7CFE', '#FF5FA2', '#8FD14F'];
 
+const renderHighlight = (text: string, accent: string) => {
+  const parts = text.split(/(\*\*.+?\*\*)/g);
+  return parts.map((part, i) =>
+    part.startsWith('**') && part.endsWith('**') ? (
+      <strong key={i} className="font-mono font-black" style={{ color: accent }}>
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      <React.Fragment key={i}>{part}</React.Fragment>
+    )
+  );
+};
+
 export const ExperienceTimeline: React.FC = () => {
   return (
     <section id="experience" className="py-24 bg-white border-t-[3px] border-black relative">
@@ -76,7 +89,7 @@ export const ExperienceTimeline: React.FC = () => {
                   {exp.highlights.map((h, i) => (
                     <li key={i} className="text-xs sm:text-sm text-[#3A342A] flex items-start gap-2.5 leading-relaxed font-normal">
                       <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5" style={{ color: accent }} />
-                      <span>{h}</span>
+                      <span>{renderHighlight(h, accent)}</span>
                     </li>
                   ))}
                 </ul>

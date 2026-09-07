@@ -64,14 +64,10 @@ export const EXPERIENCES: Experience[] = [
     location: 'Portugal & Brazil (Remote)',
     period: 'Nov 2025 – Present',
     highlights: [
-      'Built multi-channel outbound and lifecycle sequences across email and WhatsApp in n8n and Make, integrating 5+ third-party APIs via webhooks and JSON mapping.',
-      'Designed branching drip logic driven by recipient behavior and booking status, replacing rigid timers with real-time operational signals.',
       'Deployed ElevenLabs voice agents that qualify callers and book appointments mid-call through live API calls, closing the loop between conversation and CRM state.',
-      'Implemented Stripe checkout with idempotent webhook handling, keeping payment and booking records synchronized across 5 European countries (PT, RO, IE, SP, CZ) with zero duplicates.',
-      'Achieved 98% faster booking-to-payment turnaround (25m → 5s), a 100% collection rate, and an 83% drop in doctor no-shows.',
-      'Engineered an order-lifecycle automation pipeline (payment reminders, meeting-link delivery, confirmations) spanning 77 automation types — 7,075 runs at a 99.70% success rate, covering 426 of 450 orders (94.7% coverage).',
-      'Fanned out each event across email, WhatsApp, and portal notifications in parallel (e.g. meeting-link delivery fired 316× per channel to doctor, patient, and admin).',
-      'Automated fiscal document generation and delivery — 389 invoices/receipts/credit notes at a 99.2% email-delivery rate, across 450 orders (353 paid, 78.4%) spanning 6 countries.'
+      'Achieved **98% faster** booking-to-payment turnaround (25m → 5s), a **100% collection rate**, and an **83% drop** in doctor no-shows.',
+      'Engineered an order-lifecycle automation pipeline (payment reminders, meeting-link delivery, confirmations) spanning 77 automation types — **7,075 runs** at a **99.70% success rate**, covering **426 of 450 orders** (94.7% coverage).',
+      'Automated fiscal document generation and delivery — **389 invoices/receipts/credit notes** at a **99.2% email-delivery rate**, across 450 orders (353 paid, 78.4%) spanning 6 countries.'
     ],
     tags: ['n8n', 'ElevenLabs', 'Make', 'Stripe Webhooks', 'WhatsApp API', 'REST APIs', 'PostgreSQL', 'Order Automation', 'Invoice Automation']
   },
@@ -81,11 +77,11 @@ export const EXPERIENCES: Experience[] = [
     location: 'Lahore, Pakistan',
     period: 'Jun 2025 – Nov 2025',
     highlights: [
-      'Engineered approximately 30 tailored conversational and prompt sets weekly for 10+ client accounts, matched to unique client voices rather than shared templates.',
-      'Cut delivery turnaround by 40% to under 40 minutes per client by building a reusable framework and automating repetitive staging workflows.',
-      'Built and optimized conversational flows and backend logic for AI appointment agents, reaching 95% booking accuracy and maximizing lead conversion.',
+      'Engineered approximately **30 tailored** conversational and prompt sets weekly for **10+ client accounts**, matched to unique client voices rather than shared templates.',
+      'Cut delivery turnaround by **40%** to under 40 minutes per client by building a reusable framework and automating repetitive staging workflows.',
+      'Built and optimized conversational flows and backend logic for AI appointment agents, reaching **95% booking accuracy** and maximizing lead conversion.',
       'Engineered post-call automations and drip sequences in Make, Zapier, and n8n handling rescheduling, cancellations, and no-answer branches.',
-      'Raised prompt generator benchmark accuracy from 80% to 90% by testing variants against real customer transcripts.'
+      'Raised prompt generator benchmark accuracy from **80% to 90%** by testing variants against real customer transcripts.'
     ],
     tags: ['Prompt Engineering', 'Voice AI', 'Make', 'Zapier', 'Evals', 'LLM Architecture', 'A/B Testing']
   },
