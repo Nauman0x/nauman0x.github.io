@@ -391,7 +391,7 @@ export const RESEARCH_PAPERS: ResearchPaper[] = [
       'Informed the product architecture for Paw\'s Pal (AI first-aid and shelter routing).'
     ],
     links: {
-      application: { label: 'View Application (Paw\'s Pal)', href: 'https://github.com/Nauman0x/Paw-s-Pal' }
+      slides: 'https://docs.google.com/presentation/d/e/2PACX-1vT9YpJDJ-4xf-8HIQ_EUkzFiEVF5u0wKpLOMZIV7B5e73gUumtdgAqWO7JiHwH82znIpHLmVWYkvY5Z/pub?start=false&loop=false&delayms=5000'
     }
   },
   {
