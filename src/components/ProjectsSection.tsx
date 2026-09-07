@@ -1,0 +1,75 @@
+import React, { useState } from 'react';
+import { PROJECTS, type Project } from '../data/portfolioData';
+import { ProjectCard } from './ProjectCard';
+import { ProjectDrawer } from './ProjectDrawer';
+import { Layers } from 'lucide-react';
+
+export const ProjectsSection: React.FC = () => {
+  const [activeFilter, setActiveFilter] = useState<'all' | 'flagship' | 'voice' | 'games-vision' | 'automation'>('all');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const filters = [
+    { id: 'all', label: 'All Systems' },
+    { id: 'flagship', label: 'Flagships' },
+    { id: 'voice', label: 'Voice & Agents' },
+    { id: 'games-vision', label: 'Game Dev & Vision' },
+    { id: 'automation', label: 'Pipelines & Infrastructure' },
+  ] as const;
+
+  const filteredProjects = activeFilter === 'all'
+    ? PROJECTS
+    : PROJECTS.filter((p) => p.category === activeFilter);
+
+  return (
+    <section id="systems" className="py-24 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <div className="flex items-center gap-2 font-mono text-xs text-[#9D72E8] uppercase tracking-widest mb-2">
+              <Layers className="h-4 w-4" />
+              <span>PRODUCTION CATALOG // 01</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              Selected Systems & Deployments
+            </h2>
+          </div>
+
+          {/* Filter Pills */}
+          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-[#110D1D] border border-[#261D3A] font-mono text-xs">
+            {filters.map((f) => (
+              <button
+                key={f.id}
+                onClick={() => setActiveFilter(f.id)}
+                className={`px-3 py-1.5 rounded-lg transition-all duration-150 ${
+                  activeFilter === f.id
+                    ? 'bg-[#9D72E8] text-white font-semibold shadow-[0_0_15px_rgba(157,114,232,0.4)]'
+                    : 'text-[#8E84A4] hover:text-white hover:bg-[#1A1429]'
+                }`}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onSelect={setSelectedProject}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Project Inspector Slide-Over */}
+      <ProjectDrawer
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
+    </section>
+  );
+};

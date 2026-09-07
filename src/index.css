@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
+    --font-heading: 'Syne', 'Inter', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #07060A;
+    color: #D3CFE0;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07060A;
+}
+::-webkit-scrollbar-thumb {
+  background: #241C36;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9D72E8;
+}
+
+/* Custom subtle noise background */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(157, 114, 232, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(157, 114, 232, 0.05) 1px, transparent 1px);
+}
+
+.glow-lavender {
+  box-shadow: 0 0 40px -10px rgba(157, 114, 232, 0.3);
+}
+
+.glow-card {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(157, 114, 232, 0.12);
+}
+
+.glow-card:hover {
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(157, 114, 232, 0.35), 0 0 25px rgba(157, 114, 232, 0.18);
+}
