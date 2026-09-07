@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand / Monogram */}
-        <a href="#" className="flex items-center gap-3 group">
+        <a href="#" className="flex items-center gap-3 group shrink-0 whitespace-nowrap">
           <div className="h-9 w-9 bg-[#FFC300] border-[3px] border-black shadow-[2px_2px_0_0_#000000] group-hover:bg-black group-hover:text-[#FFC300] flex items-center justify-center text-black transition-all duration-150">
             <Terminal className="h-4 w-4" />
           </div>
@@ -46,19 +46,19 @@ export const Navbar: React.FC = () => {
         </a>
 
         {/* Live Status Badge */}
-        <div className="hidden lg:flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#8FD14F] border-[3px] border-black text-[11px] font-mono text-black shadow-[2px_2px_0_0_#000000]">
-          <span className="h-2 w-2 rounded-full bg-black animate-ping" />
-          <span className="h-2 w-2 rounded-full bg-black -ml-4" />
-          <span className="font-bold">STATUS: CONTRACT / FULL-TIME READY</span>
+        <div className="hidden xl:flex shrink-0 items-center gap-2 px-3 py-1 rounded-full bg-[#8FD14F] border-[3px] border-black text-[11px] font-mono text-black shadow-[2px_2px_0_0_#000000] whitespace-nowrap">
+          <span className="h-2 w-2 rounded-full bg-black animate-ping shrink-0" />
+          <span className="h-2 w-2 rounded-full bg-black -ml-4 shrink-0" />
+          <span className="font-bold">CONTRACT / FULL-TIME READY</span>
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-6 font-mono text-xs">
+        <div className="hidden md:flex items-center gap-4 xl:gap-6 font-mono text-xs shrink-0">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-[#171310] hover:text-[#FF5FA2] hover:border-b-2 hover:border-[#FF5FA2] transition-colors duration-100 py-1 font-bold"
+              className="text-[#171310] hover:text-[#FF5FA2] hover:border-b-2 hover:border-[#FF5FA2] transition-colors duration-100 py-1 font-bold whitespace-nowrap"
             >
               {link.name}
             </a>
@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
         </div>
 
         {/* Quick Social / Action Shortcuts */}
-        <div className="hidden sm:flex items-center gap-2.5">
+        <div className="hidden sm:flex items-center gap-2.5 shrink-0">
           <a
             href="https://github.com/Nauman0x"
             target="_blank"

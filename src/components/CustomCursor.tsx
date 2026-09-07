@@ -57,21 +57,19 @@ export const CustomCursor: React.FC = () => {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden transition-opacity duration-300">
-      {/* Outer Brutalist Reticle */}
+      {/* Soft trailing dot */}
       <div
-        className={`fixed -translate-x-1/2 -translate-y-1/2 border-2 border-black transition-all duration-150 ease-out ${
-          isPointer
-            ? 'h-10 w-10 bg-[#FFC300]/40 shadow-[3px_3px_0_0_#000000]'
-            : 'h-6 w-6 bg-transparent shadow-[2px_2px_0_0_#000000]'
+        className={`fixed rounded-full bg-black/20 -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out ${
+          isPointer ? 'h-8 w-8 bg-[#FFC300]/50' : 'h-4 w-4'
         }`}
         style={{
           left: `${trailPos.x}px`,
           top: `${trailPos.y}px`,
         }}
       />
-      {/* Center Precision Square */}
+      {/* Center precision dot */}
       <div
-        className="fixed h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 bg-black"
+        className="fixed h-1.5 w-1.5 rounded-full -translate-x-1/2 -translate-y-1/2 bg-black"
         style={{
           left: `${pos.x}px`,
           top: `${pos.y}px`,
