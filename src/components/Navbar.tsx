@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
         scrolled
-          ? 'bg-[#F5F0E4]/95 backdrop-blur border-b-[3px] border-black py-3 shadow-[0_6px_0_0_rgba(0,0,0,0.15)]'
+          ? 'bg-[#EDE9F8]/95 backdrop-blur border-b-[3px] border-black py-3 shadow-[0_6px_0_0_rgba(0,0,0,0.15)]'
           : 'bg-transparent py-5'
       }`}
     >
@@ -102,7 +102,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#F5F0E4] border-b-[3px] border-black px-4 py-4 font-mono text-xs space-y-3">
+        <div className="md:hidden bg-[#EDE9F8] border-b-[3px] border-black px-4 py-4 font-mono text-xs space-y-3">
           {navLinks.map((link) => (
             <a
               key={link.name}

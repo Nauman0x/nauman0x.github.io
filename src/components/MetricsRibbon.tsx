@@ -6,7 +6,7 @@ const ACCENTS = ['#FFC300', '#FF5FA2', '#8FD14F', '#4D7CFE', '#9D72E8', '#FF5A36
 
 export const MetricsRibbon: React.FC = () => {
   return (
-    <section className="py-12 border-y-[3px] border-black bg-[#F5F0E4] relative">
+    <section className="py-12 border-y-[3px] border-black bg-[#EDE9F8] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2 mb-6 font-mono text-xs text-black font-bold tracking-widest uppercase">
           <TrendingUp className="h-4 w-4" />

@@ -43,7 +43,7 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
       />
 
       {/* Slide-over Drawer Panel */}
-      <div className="relative w-full max-w-2xl bg-[#F5F0E4] border-l-[3px] border-black h-full overflow-y-auto p-6 sm:p-8 shadow-2xl z-10 flex flex-col">
+      <div className="relative w-full max-w-2xl bg-[#EDE9F8] border-l-[3px] border-black h-full overflow-y-auto p-6 sm:p-8 shadow-2xl z-10 flex flex-col">
         {/* Header Bar */}
         <div className="flex items-center justify-between pb-6 border-b-[3px] border-black mb-6">
           <div className="flex items-center gap-2">
@@ -78,7 +78,7 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
               href={project.links.github}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 bg-white hover:bg-[#EDE6D6] text-black border-[3px] border-black font-mono text-xs font-bold flex items-center gap-2 shadow-[3px_3px_0_0_#000000] transition-all"
+              className="px-4 py-2 bg-white hover:bg-[#E3DCF3] text-black border-[3px] border-black font-mono text-xs font-bold flex items-center gap-2 shadow-[3px_3px_0_0_#000000] transition-all"
             >
               <GithubIcon className="h-4 w-4" />
               <span>SOURCE REPO</span>

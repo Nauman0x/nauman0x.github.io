@@ -10,7 +10,7 @@ interface MarqueeProps {
 export const Marquee: React.FC<MarqueeProps> = ({
   items,
   bg = '#111111',
-  text = '#F5F0E4',
+  text = '#EDE9F8',
   border = '#000000',
 }) => {
   const doubled = [...items, ...items];

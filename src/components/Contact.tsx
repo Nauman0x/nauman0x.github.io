@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#F5F0E4] border-t-[3px] border-black relative">
+    <section id="contact" className="py-24 bg-[#EDE9F8] border-t-[3px] border-black relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="inline-block px-3 py-1 mb-4 bg-[#FF5FA2] border-2 border-black text-[10px] font-mono font-bold text-black -rotate-2 shadow-[2px_2px_0_0_#000000]">
           THE LAST PAGE
@@ -53,7 +53,7 @@ export const Contact: React.FC = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="who's writing?"
-                className="w-full px-3 py-2.5 bg-[#F5F0E4] border-2 border-black font-mono text-sm text-black placeholder-[#8A8474] focus:outline-none focus:bg-white"
+                className="w-full px-3 py-2.5 bg-[#EDE9F8] border-2 border-black font-mono text-sm text-black placeholder-[#8A8474] focus:outline-none focus:bg-white"
               />
             </label>
 
@@ -65,7 +65,7 @@ export const Contact: React.FC = () => {
                 value={from}
                 onChange={(e) => setFrom(e.target.value)}
                 placeholder="you@email.com"
-                className="w-full px-3 py-2.5 bg-[#F5F0E4] border-2 border-black font-mono text-sm text-black placeholder-[#8A8474] focus:outline-none focus:bg-white"
+                className="w-full px-3 py-2.5 bg-[#EDE9F8] border-2 border-black font-mono text-sm text-black placeholder-[#8A8474] focus:outline-none focus:bg-white"
               />
             </label>
 
@@ -77,7 +77,7 @@ export const Contact: React.FC = () => {
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 placeholder="what are we building?"
-                className="w-full px-3 py-2.5 bg-[#F5F0E4] border-2 border-black font-mono text-sm text-black placeholder-[#8A8474] focus:outline-none focus:bg-white resize-none"
+                className="w-full px-3 py-2.5 bg-[#EDE9F8] border-2 border-black font-mono text-sm text-black placeholder-[#8A8474] focus:outline-none focus:bg-white resize-none"
               />
             </label>
 
@@ -123,7 +123,7 @@ export const Contact: React.FC = () => {
                   href="https://github.com/Nauman0x"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-between p-2.5 border-2 border-black hover:bg-[#F5F0E4] transition-colors"
+                  className="flex items-center justify-between p-2.5 border-2 border-black hover:bg-[#EDE9F8] transition-colors"
                 >
                   <span className="flex items-center gap-2.5 text-xs font-mono font-bold text-black">
                     <GithubIcon className="h-4 w-4" />
@@ -135,7 +135,7 @@ export const Contact: React.FC = () => {
                   href="https://www.linkedin.com/in/naumanariff/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-between p-2.5 border-2 border-black hover:bg-[#F5F0E4] transition-colors"
+                  className="flex items-center justify-between p-2.5 border-2 border-black hover:bg-[#EDE9F8] transition-colors"
                 >
                   <span className="flex items-center gap-2.5 text-xs font-mono font-bold text-black">
                     <LinkedinIcon className="h-4 w-4" />
@@ -147,7 +147,7 @@ export const Contact: React.FC = () => {
                   href="https://naumanarif.itch.io/cyber-bloom"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-between p-2.5 border-2 border-black hover:bg-[#F5F0E4] transition-colors"
+                  className="flex items-center justify-between p-2.5 border-2 border-black hover:bg-[#EDE9F8] transition-colors"
                 >
                   <span className="flex items-center gap-2.5 text-xs font-mono font-bold text-black">
                     <Send className="h-4 w-4" />

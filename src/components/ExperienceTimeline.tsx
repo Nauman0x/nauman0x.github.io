@@ -29,7 +29,7 @@ export const ExperienceTimeline: React.FC = () => {
               <div
                 key={idx}
                 style={{ borderLeftColor: accent, borderLeftWidth: 8, boxShadow: `6px 6px 0px 0px ${accent}` }}
-                className="p-6 sm:p-8 bg-[#F5F0E4] border-[3px] border-black transition-all duration-200 group"
+                className="p-6 sm:p-8 bg-[#EDE9F8] border-[3px] border-black transition-all duration-200 group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4 pb-4 border-b-2 border-black/10">
                   <div className="flex items-start gap-3.5">

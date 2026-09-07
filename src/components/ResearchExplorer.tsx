@@ -71,7 +71,7 @@ const ResearchPaperCard: React.FC<ResearchPaperCardProps> = ({ paper, accent }) 
                   href={paper.links.application.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-4 py-2.5 bg-white hover:bg-[#F5F0E4] text-black border-[3px] border-black font-mono text-xs font-bold flex items-center gap-2 shadow-[2px_2px_0_0_#000000] transition-all"
+                  className="px-4 py-2.5 bg-white hover:bg-[#EDE9F8] text-black border-[3px] border-black font-mono text-xs font-bold flex items-center gap-2 shadow-[2px_2px_0_0_#000000] transition-all"
                 >
                   <ExternalLink className="h-4 w-4" />
                   <span>{paper.links.application.label.toUpperCase()}</span>
@@ -83,7 +83,7 @@ const ResearchPaperCard: React.FC<ResearchPaperCardProps> = ({ paper, accent }) 
                   href={paper.links.slides}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-4 py-2.5 bg-white hover:bg-[#F5F0E4] text-black border-[3px] border-black font-mono text-xs font-bold flex items-center gap-2 shadow-[2px_2px_0_0_#000000] transition-all"
+                  className="px-4 py-2.5 bg-white hover:bg-[#EDE9F8] text-black border-[3px] border-black font-mono text-xs font-bold flex items-center gap-2 shadow-[2px_2px_0_0_#000000] transition-all"
                 >
                   <ExternalLink className="h-4 w-4" />
                   <span>VIEW PRESENTATION</span>
@@ -97,7 +97,7 @@ const ResearchPaperCard: React.FC<ResearchPaperCardProps> = ({ paper, accent }) 
             {paper.keyStats.map((stat, i) => (
               <div
                 key={i}
-                className="p-4 bg-[#F5F0E4] border-2 border-black hover:shadow-[3px_3px_0_0_#000000] transition-all"
+                className="p-4 bg-[#EDE9F8] border-2 border-black hover:shadow-[3px_3px_0_0_#000000] transition-all"
               >
                 <div className="text-2xl sm:text-3xl font-mono font-black text-black mb-1">
                   {stat.value}
@@ -149,7 +149,7 @@ const ResearchPaperCard: React.FC<ResearchPaperCardProps> = ({ paper, accent }) 
 
 export const ResearchExplorer: React.FC = () => {
   return (
-    <section id="research" className="py-24 relative bg-[#F5F0E4]">
+    <section id="research" className="py-24 relative bg-[#EDE9F8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex items-center gap-2 font-mono text-xs text-black uppercase tracking-widest mb-3 font-bold">

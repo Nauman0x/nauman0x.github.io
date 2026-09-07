@@ -22,7 +22,7 @@ const TICKER_ITEMS = [
 
 export function App() {
   return (
-    <div className="min-h-screen bg-[#F5F0E4] text-[#171310] selection:bg-[#FFC300] selection:text-black relative bg-grid-pattern overflow-x-hidden">
+    <div className="min-h-screen bg-[#EDE9F8] text-[#171310] selection:bg-[#FFC300] selection:text-black relative bg-grid-pattern overflow-x-hidden">
       {/* Custom magnetic follower cursor */}
       <CustomCursor />
 
