@@ -15,12 +15,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: '01. Experience', href: '#experience' },
-    { name: '02. Systems', href: '#systems' },
-    { name: '03. Research', href: '#research' },
-    { name: '04. Certificates', href: '#certificates' },
-    { name: '05. Console', href: '#console' },
-    { name: '06. Contact', href: '#contact' },
+    { name: '01. Experience', href: '#experience', accent: '#FFC300' },
+    { name: '02. Systems', href: '#systems', accent: '#4D7CFE' },
+    { name: '03. Research', href: '#research', accent: '#8FD14F' },
+    { name: '04. Certificates', href: '#certificates', accent: '#FF5FA2' },
+    { name: '05. Console', href: '#console', accent: '#9D72E8' },
+    { name: '06. Contact', href: '#contact', accent: '#FF5A36' },
   ];
 
   return (
@@ -52,7 +52,8 @@ export const Navbar: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-[#171310] hover:text-white hover:bg-black transition-all duration-100 px-2 py-1.5 border-2 border-black font-bold whitespace-nowrap"
+              style={{ backgroundColor: link.accent }}
+              className="text-black hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[2px_2px_0_0_#000000] transition-all duration-100 px-2 py-1.5 border-2 border-black font-bold whitespace-nowrap"
             >
               {link.name}
             </a>
