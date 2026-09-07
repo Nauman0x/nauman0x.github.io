@@ -53,12 +53,12 @@ export const Navbar: React.FC = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-4 xl:gap-6 font-mono text-xs shrink-0">
+        <div className="hidden md:flex items-center gap-1.5 xl:gap-2 font-mono text-xs shrink-0">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-[#171310] hover:text-[#FF5FA2] hover:border-b-2 hover:border-[#FF5FA2] transition-colors duration-100 py-1 font-bold whitespace-nowrap"
+              className="text-[#171310] hover:text-white hover:bg-black transition-all duration-100 px-2 py-1.5 border-2 border-black font-bold whitespace-nowrap"
             >
               {link.name}
             </a>
