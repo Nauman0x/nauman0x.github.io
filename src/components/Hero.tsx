@@ -100,7 +100,7 @@ export const Hero: React.FC = () => {
           {/* Right: Photo card (swap placeholder for a real photo anytime) */}
           <Reveal delay={160} className="lg:col-span-4 flex justify-center lg:justify-start">
             <div className="relative rotate-3 hover:rotate-0 transition-transform duration-300">
-              <div className="bg-black border-[3px] border-black shadow-[8px_8px_0_0_#000000] p-3 pb-5 w-56 sm:w-64">
+              <div className="bg-[#E8DCC4] border-[3px] border-black shadow-[8px_8px_0_0_#000000] p-3 pb-5 w-56 sm:w-64">
                 <div className="aspect-[4/5] w-full bg-[#4D7CFE] border-[3px] border-black overflow-hidden">
                   <img
                     src={avatarPhoto}
@@ -109,9 +109,9 @@ export const Hero: React.FC = () => {
                     style={{ objectPosition: '50% 20%' }}
                   />
                 </div>
-                <div className="mt-3 flex items-center justify-between font-mono text-[11px] font-bold uppercase tracking-wide text-white">
+                <div className="mt-3 flex items-center justify-between font-mono text-[11px] font-bold uppercase tracking-wide text-black">
                   <span>FIG. 01</span>
-                  <span className="text-[#FFC300]">&mdash; The Engineer</span>
+                  <span className="text-[#B8452F]">&mdash; The Engineer</span>
                 </div>
               </div>
 
