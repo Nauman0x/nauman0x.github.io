@@ -4,13 +4,13 @@
   :root {
     --font-sans: 'Inter', system-ui, sans-serif;
     --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
-    --font-heading: 'Syne', 'Archivo Black', 'Inter', sans-serif;
+    --font-heading: 'Archivo Black', 'Syne', 'Inter', sans-serif;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #07060A;
-    color: #D3CFE0;
+    background-color: #F5F0E4;
+    color: #171310;
   }
 
   h1, h2, h3, h4, .font-heading {
@@ -24,52 +24,74 @@
 
 /* Custom Scrollbar - Sharp Brutalist */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #07060A;
+  background: #F5F0E4;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2B2342;
-  border-radius: 0px;
+  background: #171310;
+  border: 2px solid #F5F0E4;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #9D72E8;
+  background: #FFC300;
 }
 
-/* Custom subtle noise / grid background */
+/* Subtle dot-grid background on the cream canvas */
 .bg-grid-pattern {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(157, 114, 232, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(157, 114, 232, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-image: radial-gradient(rgba(23, 19, 16, 0.12) 1.5px, transparent 1.5px);
 }
 
-/* Neo-Brutalist Hard Drop Shadow Utilities */
+/* Neo-Brutalist Hard Drop Shadow Utilities (pure black by default) */
 .shadow-brutal-sm {
-  box-shadow: 2px 2px 0px 0px #9D72E8;
+  box-shadow: 2px 2px 0px 0px #000000;
 }
 
 .shadow-brutal {
-  box-shadow: 4px 4px 0px 0px #9D72E8;
+  box-shadow: 4px 4px 0px 0px #000000;
 }
 
 .shadow-brutal-lg {
-  box-shadow: 6px 6px 0px 0px #9D72E8;
+  box-shadow: 8px 8px 0px 0px #000000;
 }
 
-.shadow-brutal-dark {
-  box-shadow: 4px 4px 0px 0px #2B2342;
+.shadow-brutal-yellow {
+  box-shadow: 4px 4px 0px 0px #FFC300;
 }
 
-.shadow-brutal-dark-lg {
-  box-shadow: 6px 6px 0px 0px #2B2342;
+.shadow-brutal-pink {
+  box-shadow: 4px 4px 0px 0px #FF5FA2;
+}
+
+.shadow-brutal-green {
+  box-shadow: 4px 4px 0px 0px #8FD14F;
+}
+
+.shadow-brutal-blue {
+  box-shadow: 4px 4px 0px 0px #4D7CFE;
+}
+
+.shadow-brutal-purple {
+  box-shadow: 4px 4px 0px 0px #9D72E8;
 }
 
 .shadow-brutal-white {
   box-shadow: 4px 4px 0px 0px #FFFFFF;
 }
 
-.shadow-brutal-amber {
-  box-shadow: 4px 4px 0px 0px #FBBF24;
+/* Infinite scrolling marquee ticker */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 26s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
 }

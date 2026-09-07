@@ -21,30 +21,30 @@ export const ProjectsSection: React.FC = () => {
     : PROJECTS.filter((p) => p.category === activeFilter);
 
   return (
-    <section id="systems" className="py-24 relative">
+    <section id="systems" className="py-24 relative bg-[#F5F0E4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <div className="flex items-center gap-2 font-mono text-xs text-[#9D72E8] uppercase tracking-widest mb-2">
+            <div className="flex items-center gap-2 font-mono text-xs text-black uppercase tracking-widest mb-2 font-bold">
               <Layers className="h-4 w-4" />
               <span>PRODUCTION CATALOG // 02</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-              Selected Systems & Deployments
+            <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight font-heading">
+              Selected Systems &amp; Deployments
             </h2>
           </div>
 
           {/* Filter Group */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-none bg-[#110D1D] border-2 border-[#2B2342] font-mono text-xs shadow-[3px_3px_0_0_#2B2342]">
+          <div className="flex flex-wrap items-center gap-1.5 p-1.5 bg-white border-[3px] border-black font-mono text-xs shadow-[3px_3px_0_0_#000000]">
             {filters.map((f) => (
               <button
                 key={f.id}
                 onClick={() => setActiveFilter(f.id)}
-                className={`px-3 py-1.5 rounded-none transition-all duration-100 ${
+                className={`px-3 py-1.5 transition-all duration-100 ${
                   activeFilter === f.id
-                    ? 'bg-[#9D72E8] text-black font-bold border border-black shadow-[2px_2px_0_0_#FFFFFF]'
-                    : 'text-[#8E84A4] hover:text-white hover:bg-[#1A1429]'
+                    ? 'bg-[#FFC300] text-black font-bold border-2 border-black'
+                    : 'text-[#5C5648] font-bold hover:text-black hover:bg-[#F5F0E4]'
                 }`}
               >
                 {f.label}

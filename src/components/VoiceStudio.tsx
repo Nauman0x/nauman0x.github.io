@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { AUDIO_SAMPLES, type AudioSample } from '../data/portfolioData';
 import { Play, Pause, ExternalLink, Radio, Sliders } from 'lucide-react';
 
+const ACCENT = '#4D7CFE';
+
 export const VoiceStudio: React.FC = () => {
   const [selectedSample, setSelectedSample] = useState<AudioSample>(AUDIO_SAMPLES[0]);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -26,17 +28,17 @@ export const VoiceStudio: React.FC = () => {
   };
 
   return (
-    <section id="voice" className="py-24 bg-[#0A0713] border-y-2 border-[#2B2342] relative">
+    <section id="voice" className="py-24 bg-white border-y-[3px] border-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="flex items-center gap-2 font-mono text-xs text-[#9D72E8] font-bold uppercase tracking-widest mb-3">
+        <div className="flex items-center gap-2 font-mono text-xs text-black font-bold uppercase tracking-widest mb-3">
           <Radio className="h-4 w-4" />
-          <span>VOICE LAB & CONVERSATION STUDIO // 02</span>
+          <span>VOICE LAB &amp; CONVERSATION STUDIO // 02</span>
         </div>
-        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
-          Full-Duplex Speech & Acoustic Turn-Taking
+        <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight mb-4 font-heading">
+          Full-Duplex Speech &amp; Acoustic Turn-Taking
         </h2>
-        <p className="text-sm sm:text-base text-[#A197B8] max-w-2xl font-normal leading-relaxed mb-12">
+        <p className="text-sm sm:text-base text-[#3A342A] max-w-2xl font-normal leading-relaxed mb-12">
           Unlike brittle canned chatbots, production voice agents must handle latency jitter, speech-in interruptions, IVR voicemails, and strict single-question triage. Test sample audio recordings and explore underlying constraint logic below.
         </p>
 
@@ -53,20 +55,19 @@ export const VoiceStudio: React.FC = () => {
                     setSelectedSample(sample);
                     setIsPlaying(false);
                   }}
-                  className={`p-4 rounded-none cursor-pointer border-2 transition-all duration-150 ${
-                    isCurrent
-                      ? 'bg-[#150F26] border-[#9D72E8] shadow-[4px_4px_0_0_#9D72E8]'
-                      : 'bg-[#0F0C1B] border-[#251D38] hover:border-[#9D72E8] hover:bg-[#130E22]'
+                  style={isCurrent ? { boxShadow: `4px 4px 0px 0px ${ACCENT}` } : undefined}
+                  className={`p-4 cursor-pointer border-[3px] border-black transition-all duration-150 ${
+                    isCurrent ? 'bg-[#EAF0FF]' : 'bg-[#F5F0E4] hover:bg-[#EDE6D6]'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-1">
-                    <span className="font-bold text-sm text-white">{sample.title}</span>
-                    <span className="text-[11px] font-mono text-[#D8B4FE] px-2.5 py-0.5 rounded-full border border-[#9D72E8]/50">
+                    <span className="font-bold text-sm text-black">{sample.title}</span>
+                    <span className="text-[11px] font-mono text-black px-2.5 py-0.5 rounded-full border-2 border-black bg-white">
                       {sample.duration}
                     </span>
                   </div>
-                  <div className="text-xs font-mono text-[#9D72E8] font-semibold mb-2">{sample.agentType}</div>
-                  <div className="text-xs text-[#8E84A4] line-clamp-1">{sample.scenario}</div>
+                  <div className="text-xs font-mono font-bold mb-2" style={{ color: ACCENT }}>{sample.agentType}</div>
+                  <div className="text-xs text-[#5C5648] line-clamp-1">{sample.scenario}</div>
                 </div>
               );
             })}
@@ -76,69 +77,66 @@ export const VoiceStudio: React.FC = () => {
               href="https://drive.google.com/drive/folders/1yhcmfIIaLUbjgfetupg0k35NIRv8iz_w?usp=drive_link"
               target="_blank"
               rel="noreferrer"
-              className="mt-4 p-3 rounded-none bg-[#110D1D] border-2 border-[#2B2342] hover:border-[#9D72E8] hover:shadow-[3px_3px_0_0_#9D72E8] text-xs font-mono text-[#C4BED9] flex items-center justify-between group transition-all"
+              className="mt-4 p-3 bg-white border-[3px] border-black hover:shadow-[3px_3px_0_0_#000000] text-xs font-mono font-bold text-black flex items-center justify-between group transition-all"
             >
               <span>ACCESS GOOGLE DRIVE CALL ARCHIVE</span>
-              <ExternalLink className="h-4 w-4 text-[#9D72E8] group-hover:translate-x-0.5 transition-transform" />
+              <ExternalLink className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>
 
           {/* Right Column: Interactive Synthesizer Console */}
-          <div className="lg:col-span-7 rounded-none bg-[#0D0918] border-2 border-[#2B2342] p-6 sm:p-8 flex flex-col justify-between shadow-[6px_6px_0_0_#2B2342]">
+          <div className="lg:col-span-7 bg-[#F5F0E4] border-[3px] border-black p-6 sm:p-8 flex flex-col justify-between shadow-[6px_6px_0_0_#000000]">
             <div>
               {/* Console Top Bar */}
-              <div className="flex items-center justify-between pb-4 border-b-2 border-[#211836] mb-6">
+              <div className="flex items-center justify-between pb-4 border-b-2 border-black/15 mb-6">
                 <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#FBBF24] animate-pulse" />
-                  <span className="font-mono text-xs text-white uppercase tracking-wider font-bold">
+                  <span className="h-2 w-2 rounded-full bg-[#8FD14F] animate-pulse border border-black" />
+                  <span className="font-mono text-xs text-black uppercase tracking-wider font-bold">
                     SPECTRUM SIMULATOR // {selectedSample.agentType}
                   </span>
                 </div>
-                <span className="font-mono text-xs text-[#7E7496]">SUB-800MS STT/TTS</span>
+                <span className="font-mono text-xs text-[#5C5648]">SUB-800MS STT/TTS</span>
               </div>
 
               {/* Currently Selected Title */}
-              <h3 className="text-xl sm:text-2xl font-black text-white mb-2">{selectedSample.title}</h3>
-              <p className="text-xs font-mono text-[#9D72E8] mb-6">{selectedSample.scenario}</p>
+              <h3 className="text-xl sm:text-2xl font-black text-black mb-2">{selectedSample.title}</h3>
+              <p className="text-xs font-mono font-bold mb-6" style={{ color: ACCENT }}>{selectedSample.scenario}</p>
 
               {/* Dynamic Waveform Visualizer */}
-              <div className="h-28 rounded-none bg-[#07050D] border-2 border-[#211836] p-4 flex items-end justify-between gap-1.5 mb-6 overflow-hidden">
+              <div className="h-28 bg-white border-2 border-black p-4 flex items-end justify-between gap-1.5 mb-6 overflow-hidden">
                 {activeBars.map((height, i) => (
                   <div
                     key={i}
-                    style={{ height: `${height}%` }}
-                    className={`flex-1 rounded-none transition-all duration-75 ${
-                      isPlaying
-                        ? 'bg-[#9D72E8]'
-                        : 'bg-[#251D38]'
-                    }`}
+                    style={{ height: `${height}%`, backgroundColor: isPlaying ? ACCENT : '#D8D0BE' }}
+                    className="flex-1 transition-all duration-75"
                   />
                 ))}
               </div>
 
               {/* Engineering Rule Card */}
-              <div className="p-4 rounded-none bg-[#120D21] border-2 border-[#241B3B] mb-6">
-                <div className="text-[11px] font-mono text-[#9D72E8] uppercase tracking-wider mb-1 flex items-center gap-1.5 font-bold">
+              <div className="p-4 bg-white border-2 border-black mb-6">
+                <div className="text-[11px] font-mono uppercase tracking-wider mb-1 flex items-center gap-1.5 font-bold" style={{ color: ACCENT }}>
                   <Sliders className="h-3.5 w-3.5" />
                   <span>CRITICAL PROMPT CONSTRAINT</span>
                 </div>
-                <div className="text-xs text-[#D1CCE0] font-mono leading-relaxed">
+                <div className="text-xs text-black font-mono leading-relaxed">
                   {selectedSample.keyRule}
                 </div>
               </div>
             </div>
 
             {/* Playback Controls & Drive Link */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t-2 border-[#1F1732]">
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t-2 border-black/15">
               <div className="flex items-center gap-3">
                 <button
                   onClick={togglePlay}
-                  className="px-5 py-2.5 rounded-none bg-[#9D72E8] hover:bg-[#B794F4] text-black font-mono text-xs font-bold flex items-center gap-2 border-2 border-black shadow-[3px_3px_0_0_#FFFFFF] transition-all"
+                  style={{ backgroundColor: ACCENT }}
+                  className="px-5 py-2.5 hover:brightness-110 text-white font-mono text-xs font-bold flex items-center gap-2 border-[3px] border-black shadow-[3px_3px_0_0_#000000] transition-all"
                 >
-                  {isPlaying ? <Pause className="h-4 w-4 fill-black" /> : <Play className="h-4 w-4 fill-black" />}
+                  {isPlaying ? <Pause className="h-4 w-4 fill-white" /> : <Play className="h-4 w-4 fill-white" />}
                   <span>{isPlaying ? 'PAUSE STREAM' : 'SIMULATE STREAM'}</span>
                 </button>
-                <span className="font-mono text-xs text-[#7A7091]">
+                <span className="font-mono text-xs text-[#5C5648]">
                   {isPlaying ? 'Acoustic pipeline live' : 'Ready for test call'}
                 </span>
               </div>
@@ -147,9 +145,9 @@ export const VoiceStudio: React.FC = () => {
                 href={selectedSample.driveLink}
                 target="_blank"
                 rel="noreferrer"
-                className="px-4 py-2 rounded-none bg-[#171126] hover:bg-[#251C3D] text-white border-2 border-[#31254D] hover:border-[#9D72E8] font-mono text-xs flex items-center gap-2 shadow-[2px_2px_0_0_#2B2342] hover:shadow-[2px_2px_0_0_#9D72E8] transition-all"
+                className="px-4 py-2 bg-white hover:bg-[#EDE6D6] text-black border-2 border-black font-mono text-xs font-bold flex items-center gap-2 shadow-[2px_2px_0_0_#000000] transition-all"
               >
-                <ExternalLink className="h-3.5 w-3.5 text-[#9D72E8]" />
+                <ExternalLink className="h-3.5 w-3.5" />
                 <span>LISTEN TO RECORDING (DRIVE)</span>
               </a>
             </div>

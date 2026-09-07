@@ -1,6 +1,7 @@
 import { CustomCursor } from './components/CustomCursor';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { Marquee } from './components/Marquee';
 import { MetricsRibbon } from './components/MetricsRibbon';
 import { ProjectsSection } from './components/ProjectsSection';
 import { VoiceStudio } from './components/VoiceStudio';
@@ -9,9 +10,18 @@ import { ResearchExplorer } from './components/ResearchExplorer';
 import { TerminalHUD } from './components/TerminalHUD';
 import { Footer } from './components/Footer';
 
+const TICKER_ITEMS = [
+  'AI ENGINEER',
+  'FULL-STACK DEV',
+  'SHIPS TO PRODUCTION',
+  '5 EU COUNTRIES',
+  '2X NATIONAL CHAMPION',
+  '95% BOOKING ACCURACY',
+];
+
 export function App() {
   return (
-    <div className="min-h-screen bg-[#07060A] text-[#D3CFE0] selection:bg-[#9D72E8] selection:text-white relative bg-grid-pattern overflow-x-hidden">
+    <div className="min-h-screen bg-[#F5F0E4] text-[#171310] selection:bg-[#FFC300] selection:text-black relative bg-grid-pattern overflow-x-hidden">
       {/* Custom magnetic follower cursor */}
       <CustomCursor />
 
@@ -21,6 +31,9 @@ export function App() {
       <main>
         {/* Hero Section */}
         <Hero />
+
+        {/* Scrolling accolade ticker */}
+        <Marquee items={TICKER_ITEMS} />
 
         {/* Real Production Metrics Ribbon */}
         <MetricsRibbon />
