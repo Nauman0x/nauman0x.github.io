@@ -48,30 +48,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
         transform: `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) ${isHovered ? 'scale3d(1.01, 1.01, 1.01)' : 'scale3d(1, 1, 1)'}`,
         transition: isHovered ? 'transform 0.1s ease-out' : 'transform 0.35s ease-out',
       }}
-      className="cursor-pointer group relative flex flex-col justify-between rounded-2xl bg-[#0F0C1B] border border-[#261E3A] hover:border-[#9D72E8] p-6 transition-all duration-300 shadow-xl hover:shadow-[0_12px_35px_rgba(0,0,0,0.8)] overflow-hidden"
+      className="cursor-pointer group relative flex flex-col justify-between rounded-none bg-[#0F0C1B] border-2 border-[#2B2342] hover:border-[#9D72E8] hover:shadow-[6px_6px_0_0_#9D72E8] p-6 transition-all duration-200 overflow-hidden"
     >
-      {/* Background corner ambient glow */}
-      <div
-        className={`absolute -top-12 -right-12 w-44 h-44 rounded-full bg-[#9D72E8]/10 blur-3xl transition-opacity duration-300 pointer-events-none ${
-          isHovered ? 'opacity-100' : 'opacity-30'
-        }`}
-      />
-
       <div>
         {/* Card Header Info */}
         <div className="flex items-center justify-between gap-2 mb-4">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-[11px] text-[#9D72E8] tracking-widest uppercase">
+            <span className="font-mono text-[11px] text-[#9D72E8] font-bold tracking-widest uppercase">
               SYS // {project.category}
             </span>
             {project.award && (
-              <span className="px-2 py-0.5 rounded bg-[#9D72E8]/15 text-[#D8B4FE] text-[10px] font-mono border border-[#9D72E8]/30 flex items-center gap-1">
-                <Award className="h-3 w-3 text-[#9D72E8]" />
+              <span className="px-2 py-0.5 rounded-none bg-[#9D72E8] text-black text-[10px] font-mono font-black flex items-center gap-1 border border-black shadow-[2px_2px_0_0_#000000]">
+                <Award className="h-3 w-3 text-black" />
                 <span>CHAMPION</span>
               </span>
             )}
           </div>
-          <div className="h-7 w-7 rounded-lg bg-[#181329] border border-[#2D2344] group-hover:border-[#9D72E8] flex items-center justify-center text-[#9A91B0] group-hover:text-white transition-colors">
+          <div className="h-7 w-7 rounded-none bg-[#181329] border-2 border-[#2B2342] group-hover:border-[#9D72E8] group-hover:bg-[#9D72E8] group-hover:text-black flex items-center justify-center text-[#9A91B0] transition-all">
             <ArrowUpRight className="h-4 w-4" />
           </div>
         </div>
@@ -80,7 +73,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
         <h3 className="text-xl font-bold text-white group-hover:text-[#B794F4] transition-colors mb-1.5 flex items-center gap-2">
           <span>{project.title}</span>
         </h3>
-        <p className="text-xs font-mono text-[#8E84A4] mb-4 line-clamp-1">{project.subtitle}</p>
+        <p className="text-xs font-mono text-[#9D72E8] mb-4 line-clamp-1">{project.subtitle}</p>
 
         {/* Short Description */}
         <p className="text-xs text-[#BCB6D1] leading-relaxed line-clamp-3 mb-6 font-normal">
@@ -94,20 +87,20 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
           {project.tags.slice(0, 4).map((t, idx) => (
             <span
               key={idx}
-              className="px-2 py-0.5 rounded bg-[#161126] border border-[#281F3E] text-[10px] font-mono text-[#B1A9C9]"
+              className="px-2.5 py-0.5 rounded-full bg-transparent border border-[#9D72E8]/40 text-[10px] font-mono uppercase text-[#D8B4FE]"
             >
               {t}
             </span>
           ))}
           {project.tags.length > 4 && (
-            <span className="px-1.5 py-0.5 text-[10px] font-mono text-[#7D7297]">
+            <span className="px-1.5 py-0.5 text-[10px] font-mono uppercase text-[#8C81A6]">
               +{project.tags.length - 4} more
             </span>
           )}
         </div>
 
-        <div className="flex items-center justify-between pt-4 border-t border-[#1F1732] text-xs font-mono text-[#8C81A6]">
-          <span className="group-hover:text-white flex items-center gap-1 transition-colors">
+        <div className="flex items-center justify-between pt-4 border-t-2 border-[#211836] text-xs font-mono text-[#8C81A6]">
+          <span className="group-hover:text-[#9D72E8] flex items-center gap-1 font-bold transition-colors">
             <span>INSPECT SPECS</span>
             <ChevronRight className="h-3.5 w-3.5 text-[#9D72E8]" />
           </span>

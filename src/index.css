@@ -4,7 +4,7 @@
   :root {
     --font-sans: 'Inter', system-ui, sans-serif;
     --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
-    --font-heading: 'Syne', 'Inter', sans-serif;
+    --font-heading: 'Syne', 'Archivo Black', 'Inter', sans-serif;
   }
 
   body {
@@ -22,7 +22,7 @@
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Sharp Brutalist */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -30,14 +30,14 @@
   background: #07060A;
 }
 ::-webkit-scrollbar-thumb {
-  background: #241C36;
-  border-radius: 9999px;
+  background: #2B2342;
+  border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #9D72E8;
 }
 
-/* Custom subtle noise background */
+/* Custom subtle noise / grid background */
 .bg-grid-pattern {
   background-size: 32px 32px;
   background-image: 
@@ -45,14 +45,31 @@
     linear-gradient(to bottom, rgba(157, 114, 232, 0.05) 1px, transparent 1px);
 }
 
-.glow-lavender {
-  box-shadow: 0 0 40px -10px rgba(157, 114, 232, 0.3);
+/* Neo-Brutalist Hard Drop Shadow Utilities */
+.shadow-brutal-sm {
+  box-shadow: 2px 2px 0px 0px #9D72E8;
 }
 
-.glow-card {
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(157, 114, 232, 0.12);
+.shadow-brutal {
+  box-shadow: 4px 4px 0px 0px #9D72E8;
 }
 
-.glow-card:hover {
-  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(157, 114, 232, 0.35), 0 0 25px rgba(157, 114, 232, 0.18);
+.shadow-brutal-lg {
+  box-shadow: 6px 6px 0px 0px #9D72E8;
+}
+
+.shadow-brutal-dark {
+  box-shadow: 4px 4px 0px 0px #2B2342;
+}
+
+.shadow-brutal-dark-lg {
+  box-shadow: 6px 6px 0px 0px #2B2342;
+}
+
+.shadow-brutal-white {
+  box-shadow: 4px 4px 0px 0px #FFFFFF;
+}
+
+.shadow-brutal-amber {
+  box-shadow: 4px 4px 0px 0px #FBBF24;
 }

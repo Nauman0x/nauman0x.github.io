@@ -34,22 +34,22 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
       />
 
       {/* Slide-over Drawer Panel */}
-      <div className="relative w-full max-w-2xl bg-[#0C0916] border-l border-[#2B2144] h-full overflow-y-auto p-6 sm:p-8 shadow-2xl z-10 animate-slide-in-right flex flex-col">
+      <div className="relative w-full max-w-2xl bg-[#0C0916] border-l-2 border-[#9D72E8] h-full overflow-y-auto p-6 sm:p-8 shadow-2xl z-10 flex flex-col">
         {/* Header Bar */}
-        <div className="flex items-center justify-between pb-6 border-b border-[#211836] mb-6">
+        <div className="flex items-center justify-between pb-6 border-b-2 border-[#211836] mb-6">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xs text-[#9D72E8] uppercase tracking-wider">
+            <span className="font-mono text-xs text-[#9D72E8] font-bold uppercase tracking-wider">
               PROJECT INSPECTOR // {project.id}
             </span>
             {project.award && (
-              <span className="px-2 py-0.5 rounded bg-[#9D72E8]/20 text-[#D8B4FE] text-[10px] font-mono border border-[#9D72E8]/30">
+              <span className="px-2 py-0.5 rounded-none bg-[#9D72E8] text-black text-[10px] font-mono font-black border border-black shadow-[2px_2px_0_0_#000000]">
                 {project.award}
               </span>
             )}
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg bg-[#171126] text-[#9A91B0] hover:text-white hover:bg-[#251B3D] transition-colors border border-[#2B2144]"
+            className="p-2 rounded-none bg-[#171126] text-[#C4BED9] hover:text-black hover:bg-[#9D72E8] transition-all border-2 border-[#2B2342] hover:border-[#9D72E8] shadow-[2px_2px_0_0_#2B2342]"
             aria-label="Close drawer"
           >
             <X className="h-5 w-5" />
@@ -58,8 +58,8 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
 
         {/* Title & Subtitle */}
         <div className="mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">{project.title}</h2>
-          <p className="text-sm font-mono text-[#B794F4]">{project.subtitle}</p>
+          <h2 className="text-2xl sm:text-3xl font-black text-white mb-2">{project.title}</h2>
+          <p className="text-sm font-mono text-[#9D72E8]">{project.subtitle}</p>
         </div>
 
         {/* Action Link Buttons */}
@@ -69,7 +69,7 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
               href={project.links.github}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 rounded-xl bg-[#171224] hover:bg-[#231A38] text-white border border-[#372A52] font-mono text-xs font-semibold flex items-center gap-2 transition-all"
+              className="px-4 py-2 rounded-none bg-[#171224] hover:bg-[#231A38] text-white border-2 border-[#372A52] hover:border-[#9D72E8] font-mono text-xs font-semibold flex items-center gap-2 shadow-[3px_3px_0_0_#2B2342] hover:shadow-[3px_3px_0_0_#9D72E8] transition-all"
             >
               <GithubIcon className="h-4 w-4 text-[#9D72E8]" />
               <span>SOURCE REPO</span>
@@ -80,7 +80,7 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
               href={project.links.itch}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 rounded-xl bg-[#FA5C5C] hover:bg-[#ff6e6e] text-white font-mono text-xs font-bold flex items-center gap-2 shadow-[0_0_15px_rgba(250,92,92,0.4)] transition-all"
+              className="px-4 py-2 rounded-none bg-[#FA5C5C] hover:bg-[#ff6e6e] text-white font-mono text-xs font-bold flex items-center gap-2 border-2 border-black shadow-[3px_3px_0_0_#FFFFFF] transition-all"
             >
               <Play className="h-4 w-4 fill-white" />
               <span>PLAY ON ITCH.IO</span>
@@ -91,7 +91,7 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
               href={project.links.video}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 rounded-xl bg-[#9D72E8] hover:bg-[#8B5CF6] text-white font-mono text-xs font-semibold flex items-center gap-2 shadow-[0_0_20px_rgba(157,114,232,0.35)] transition-all"
+              className="px-4 py-2 rounded-none bg-[#9D72E8] hover:bg-[#B794F4] text-black font-mono text-xs font-bold flex items-center gap-2 border-2 border-black shadow-[3px_3px_0_0_#FFFFFF] transition-all"
             >
               <ExternalLink className="h-4 w-4" />
               <span>WATCH DEMO VIDEO</span>
@@ -102,7 +102,7 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
               href={project.links.live}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 rounded-xl bg-[#9D72E8] hover:bg-[#8B5CF6] text-white font-mono text-xs font-semibold flex items-center gap-2 transition-all"
+              className="px-4 py-2 rounded-none bg-[#9D72E8] hover:bg-[#B794F4] text-black font-mono text-xs font-bold flex items-center gap-2 border-2 border-black shadow-[3px_3px_0_0_#FFFFFF] transition-all"
             >
               <ExternalLink className="h-4 w-4" />
               <span>LIVE SITE</span>
@@ -112,12 +112,12 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
 
         {/* Tech Stack Pills */}
         <div className="mb-6">
-          <div className="text-xs font-mono text-[#8C82A2] mb-2 uppercase tracking-wider">TECHNOLOGIES USED</div>
+          <div className="text-xs font-mono text-[#9D72E8] font-bold mb-2 uppercase tracking-wider">TECHNOLOGIES USED</div>
           <div className="flex flex-wrap gap-1.5">
             {project.tags.map((t, i) => (
               <span
                 key={i}
-                className="px-2.5 py-1 rounded-md bg-[#130E21] border border-[#271D3E] text-[11px] font-mono text-[#C4BED9]"
+                className="px-2.5 py-0.5 rounded-full bg-transparent border border-[#9D72E8]/40 text-[10px] font-mono uppercase text-[#D8B4FE]"
               >
                 {t}
               </span>
@@ -127,21 +127,21 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
 
         {/* Detailed Description */}
         <div className="mb-6">
-          <div className="text-xs font-mono text-[#8C82A2] mb-2 uppercase tracking-wider">OVERVIEW & PROBLEM SOLVED</div>
+          <div className="text-xs font-mono text-[#9D72E8] font-bold mb-2 uppercase tracking-wider">OVERVIEW & PROBLEM SOLVED</div>
           <p className="text-sm text-[#C4BED9] leading-relaxed font-normal">{project.description}</p>
         </div>
 
         {/* Hard Metrics */}
         {project.metrics && project.metrics.length > 0 && (
-          <div className="mb-6 p-4 rounded-xl bg-[#120E1E] border border-[#2B2144]">
-            <div className="text-xs font-mono text-[#9D72E8] mb-3 uppercase tracking-wider flex items-center gap-1.5">
+          <div className="mb-6 p-4 rounded-none bg-[#120E1E] border-2 border-[#2B2144] shadow-[4px_4px_0_0_#2B2342]">
+            <div className="text-xs font-mono text-[#9D72E8] mb-3 uppercase tracking-wider flex items-center gap-1.5 font-bold">
               <CheckCircle2 className="h-4 w-4" />
               <span>VERIFIED OUTCOMES</span>
             </div>
             <ul className="space-y-2">
               {project.metrics.map((m, i) => (
                 <li key={i} className="text-xs text-[#D3CFE0] flex items-start gap-2">
-                  <span className="text-[#9D72E8] mt-0.5">•</span>
+                  <span className="text-[#9D72E8] mt-0.5 font-bold">■</span>
                   <span>{m}</span>
                 </li>
               ))}
@@ -152,13 +152,13 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({ project, onClose }
         {/* Architecture Points */}
         {project.architecture && project.architecture.length > 0 && (
           <div className="mb-6">
-            <div className="text-xs font-mono text-[#8C82A2] mb-3 uppercase tracking-wider flex items-center gap-1.5">
+            <div className="text-xs font-mono text-[#9D72E8] mb-3 uppercase tracking-wider flex items-center gap-1.5 font-bold">
               <Layers className="h-4 w-4 text-[#9D72E8]" />
               <span>SYSTEM ARCHITECTURE</span>
             </div>
             <div className="space-y-2 font-mono text-xs">
               {project.architecture.map((arch, i) => (
-                <div key={i} className="p-3 rounded-lg bg-[#0F0B1A] border border-[#241C36] text-[#BDB6D4]">
+                <div key={i} className="p-3 rounded-none bg-[#0F0B1A] border-2 border-[#241C36] text-[#BDB6D4]">
                   {arch}
                 </div>
               ))}

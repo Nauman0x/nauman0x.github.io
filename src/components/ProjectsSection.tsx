@@ -35,15 +35,15 @@ export const ProjectsSection: React.FC = () => {
             </h2>
           </div>
 
-          {/* Filter Pills */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-[#110D1D] border border-[#261D3A] font-mono text-xs">
+          {/* Filter Group */}
+          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-none bg-[#110D1D] border-2 border-[#2B2342] font-mono text-xs shadow-[3px_3px_0_0_#2B2342]">
             {filters.map((f) => (
               <button
                 key={f.id}
                 onClick={() => setActiveFilter(f.id)}
-                className={`px-3 py-1.5 rounded-lg transition-all duration-150 ${
+                className={`px-3 py-1.5 rounded-none transition-all duration-100 ${
                   activeFilter === f.id
-                    ? 'bg-[#9D72E8] text-white font-semibold shadow-[0_0_15px_rgba(157,114,232,0.4)]'
+                    ? 'bg-[#9D72E8] text-black font-bold border border-black shadow-[2px_2px_0_0_#FFFFFF]'
                     : 'text-[#8E84A4] hover:text-white hover:bg-[#1A1429]'
                 }`}
               >

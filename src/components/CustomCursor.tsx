@@ -57,21 +57,21 @@ export const CustomCursor: React.FC = () => {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden transition-opacity duration-300">
-      {/* Outer Glow Ring */}
+      {/* Outer Brutalist Reticle */}
       <div
-        className={`fixed -translate-x-1/2 -translate-y-1/2 rounded-full border transition-all duration-150 ease-out ${
+        className={`fixed -translate-x-1/2 -translate-y-1/2 rounded-none border-2 transition-all duration-150 ease-out ${
           isPointer
-            ? 'h-12 w-12 border-[#9D72E8] bg-[#9D72E8]/10 shadow-[0_0_20px_rgba(157,114,232,0.4)]'
-            : 'h-8 w-8 border-[#9D72E8]/40 shadow-[0_0_10px_rgba(157,114,232,0.2)]'
+            ? 'h-10 w-10 border-[#9D72E8] bg-[#9D72E8]/20 shadow-[3px_3px_0_0_#9D72E8]'
+            : 'h-6 w-6 border-[#9D72E8]/60 shadow-[2px_2px_0_0_#2B2342]'
         }`}
         style={{
           left: `${trailPos.x}px`,
           top: `${trailPos.y}px`,
         }}
       />
-      {/* Center Precision Dot */}
+      {/* Center Precision Square */}
       <div
-        className="fixed h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B794F4]"
+        className="fixed h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-none bg-[#9D72E8]"
         style={{
           left: `${pos.x}px`,
           top: `${pos.y}px`,

@@ -13,22 +13,19 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="py-20 border-t border-[#1C152B] bg-[#060509] relative overflow-hidden">
-      {/* Ambient background glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#9D72E8]/10 blur-[100px] pointer-events-none" />
-
+    <footer className="py-20 border-t-2 border-[#2B2342] bg-[#060509] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-12 border-b border-[#1C152B]">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-12 border-b-2 border-[#1C152B]">
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <div className="h-8 w-8 rounded-lg bg-[#140F24] border border-[#2B2044] flex items-center justify-center text-[#9D72E8]">
+              <div className="h-8 w-8 rounded-none bg-[#140F24] border-2 border-[#9D72E8] shadow-[2px_2px_0_0_#9D72E8] flex items-center justify-center text-[#9D72E8]">
                 <Terminal className="h-4 w-4" />
               </div>
               <span className="font-mono text-base font-bold text-white tracking-wider">
                 NAUMAN.ARIF <span className="text-[#9D72E8] font-normal">[0x]</span>
               </span>
             </div>
-            <p className="text-sm text-[#938AAB] max-w-md font-normal">
+            <p className="text-sm text-[#A69EB8] max-w-md font-normal">
               Backend AI &amp; Automation Engineer. 2x SOFTEC National Champion. Ready to architect high-impact voice agents, data pipelines, and intelligent products.
             </p>
           </div>
@@ -37,15 +34,15 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <button
               onClick={copyEmail}
-              className="px-4 py-2.5 rounded-xl bg-[#120E1E] hover:bg-[#1C162E] text-white border border-[#271E3A] hover:border-[#9D72E8] font-mono text-xs flex items-center gap-2 transition-all shadow-md"
+              className="px-4 py-2.5 rounded-none bg-[#120E1E] hover:bg-[#1C162E] text-white border-2 border-[#2B2342] hover:border-[#9D72E8] font-mono text-xs flex items-center gap-2 transition-all shadow-[3px_3px_0_0_#2B2342] hover:shadow-[3px_3px_0_0_#9D72E8]"
             >
-              {copied ? <Check className="h-4 w-4 text-emerald-400" /> : <Copy className="h-4 w-4 text-[#9D72E8]" />}
+              {copied ? <Check className="h-4 w-4 text-[#FBBF24]" /> : <Copy className="h-4 w-4 text-[#9D72E8]" />}
               <span>{copied ? 'EMAIL COPIED TO CLIPBOARD' : email}</span>
             </button>
 
             <a
               href="mailto:naumanarif432@gmail.com"
-              className="px-5 py-2.5 rounded-xl bg-[#9D72E8] hover:bg-[#8B5CF6] text-white font-mono text-xs font-semibold flex items-center gap-2 shadow-[0_0_20px_rgba(157,114,232,0.3)] transition-all"
+              className="px-5 py-2.5 rounded-none bg-[#9D72E8] hover:bg-[#B794F4] text-black font-mono text-xs font-bold flex items-center gap-2 border-2 border-black shadow-[3px_3px_0_0_#FFFFFF] hover:shadow-[4px_4px_0_0_#FFFFFF] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
             >
               <Mail className="h-4 w-4" />
               <span>SEND INQUIRY</span>

@@ -145,14 +145,14 @@ export const TerminalHUD: React.FC = () => {
   };
 
   return (
-    <section id="console" className="py-24 bg-[#08060E] border-t border-[#1C152B] relative">
+    <section id="console" className="py-24 bg-[#08060E] border-t-2 border-[#2B2342] relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex items-center gap-2 font-mono text-xs text-[#9D72E8] uppercase tracking-widest mb-3">
+        <div className="flex items-center gap-2 font-mono text-xs text-[#9D72E8] font-bold uppercase tracking-widest mb-3">
           <Terminal className="h-4 w-4" />
           <span>INTERACTIVE COMMAND INTERFACE // 05</span>
         </div>
-        <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
+        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
           Terminal Console Emulator
         </h2>
         <p className="text-sm sm:text-base text-[#A197B8] max-w-2xl font-normal leading-relaxed mb-8">
@@ -161,12 +161,12 @@ export const TerminalHUD: React.FC = () => {
 
         {/* Command Pill Shortcuts */}
         <div className="flex flex-wrap items-center gap-2 mb-4">
-          <span className="text-xs font-mono text-[#786D8E]">QUICK COMMANDS:</span>
+          <span className="text-xs font-mono text-[#9D72E8] font-bold">QUICK COMMANDS:</span>
           {['whoami', 'awards', 'experience', 'projects', 'research', 'contact', 'clear'].map((cmd) => (
             <button
               key={cmd}
               onClick={() => executeCommand(cmd)}
-              className="px-2.5 py-1 rounded bg-[#130E22] hover:bg-[#201838] border border-[#2B2044] hover:border-[#9D72E8] text-[11px] font-mono text-[#D8B4FE] transition-colors"
+              className="px-3 py-1 rounded-none bg-[#130E22] hover:bg-[#201838] border-2 border-[#2B2044] hover:border-[#9D72E8] hover:shadow-[2px_2px_0_0_#9D72E8] text-[11px] font-mono text-[#D8B4FE] transition-all"
             >
               ${cmd}
             </button>
@@ -174,16 +174,16 @@ export const TerminalHUD: React.FC = () => {
         </div>
 
         {/* Terminal Window Box */}
-        <div className="rounded-2xl bg-[#0C0916] border border-[#2B2144] shadow-2xl overflow-hidden font-mono text-xs">
+        <div className="rounded-none bg-[#0C0916] border-2 border-[#9D72E8] shadow-[8px_8px_0_0_#2B2342] overflow-hidden font-mono text-xs">
           {/* Window Topbar */}
-          <div className="px-4 py-3 bg-[#130E24] border-b border-[#241A3A] flex items-center justify-between">
+          <div className="px-4 py-3 bg-[#130E24] border-b-2 border-[#241A3A] flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="h-3 w-3 rounded-full bg-rose-500/80" />
-              <span className="h-3 w-3 rounded-full bg-amber-500/80" />
-              <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
-              <span className="ml-2 text-[11px] text-[#8C81A6]">nauman@systems-node:~</span>
+              <span className="h-3 w-3 rounded-none bg-rose-500/90" />
+              <span className="h-3 w-3 rounded-none bg-[#FBBF24]" />
+              <span className="h-3 w-3 rounded-none bg-[#9D72E8]" />
+              <span className="ml-2 text-[11px] text-[#C4BED9] font-bold">nauman@systems-node:~</span>
             </div>
-            <div className="text-[11px] text-[#716885]">BASH v5.2</div>
+            <div className="text-[11px] text-[#8C82A2]">BASH v5.2</div>
           </div>
 
           {/* Terminal Body */}
@@ -191,17 +191,17 @@ export const TerminalHUD: React.FC = () => {
             {history.map((item, idx) => (
               <div key={idx} className="space-y-1.5">
                 <div className="flex items-center gap-2 text-[#9D72E8]">
-                  <span className="text-[#B794F4]">nauman@systems:~$</span>
-                  <span className="text-white">{item.command}</span>
+                  <span className="text-[#9D72E8] font-bold">nauman@systems:~$</span>
+                  <span className="text-white font-bold">{item.command}</span>
                 </div>
-                <div className="pl-4 border-l border-[#241C36]">{item.response}</div>
+                <div className="pl-4 border-l-2 border-[#2B2342]">{item.response}</div>
               </div>
             ))}
             <div ref={terminalEndRef} />
           </div>
 
           {/* Terminal Input Line */}
-          <div className="px-6 py-3.5 bg-[#090710] border-t border-[#201733] flex items-center gap-2">
+          <div className="px-6 py-3.5 bg-[#090710] border-t-2 border-[#201733] flex items-center gap-2">
             <span className="text-[#9D72E8] font-bold">nauman@systems:~$</span>
             <input
               type="text"
@@ -213,9 +213,10 @@ export const TerminalHUD: React.FC = () => {
             />
             <button
               onClick={() => executeCommand(inputVal)}
-              className="p-1 rounded bg-[#171126] text-[#9D72E8] hover:text-white"
+              className="p-1.5 rounded-none bg-[#9D72E8] hover:bg-[#B794F4] text-black font-bold transition-all shadow-[2px_2px_0_0_#FFFFFF]"
+              aria-label="Execute command"
             >
-              <CornerDownLeft className="h-3.5 w-3.5" />
+              <CornerDownLeft className="h-3.5 w-3.5 stroke-[2.5]" />
             </button>
           </div>
         </div>
