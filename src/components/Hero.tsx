@@ -1,6 +1,7 @@
 import React from 'react';
-import { Award, Bot, Sparkles, ShieldCheck, Activity, UserRound, Zap, ArrowUpRight, TrendingUp } from 'lucide-react';
+import { Award, Bot, Sparkles, ShieldCheck, Activity, Zap, ArrowUpRight, TrendingUp } from 'lucide-react';
 import { Reveal } from './Reveal';
+import avatarPhoto from '../assets/avatar.jpg';
 
 const STAR_CLIP =
   'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
@@ -100,8 +101,13 @@ export const Hero: React.FC = () => {
           <Reveal delay={160} className="lg:col-span-4 flex justify-center lg:justify-start">
             <div className="relative rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="bg-black border-[3px] border-black shadow-[8px_8px_0_0_#000000] p-3 pb-5 w-56 sm:w-64">
-                <div className="aspect-[4/5] w-full bg-[#4D7CFE] border-[3px] border-black flex items-center justify-center overflow-hidden">
-                  <UserRound className="h-20 w-20 text-black/40" strokeWidth={1.25} />
+                <div className="aspect-[4/5] w-full bg-[#4D7CFE] border-[3px] border-black overflow-hidden">
+                  <img
+                    src={avatarPhoto}
+                    alt="Nauman Arif"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: '48% 22%' }}
+                  />
                 </div>
                 <div className="mt-3 flex items-center justify-between font-mono text-[11px] font-bold uppercase tracking-wide text-white">
                   <span>FIG. 01</span>
