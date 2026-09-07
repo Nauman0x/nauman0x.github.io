@@ -42,14 +42,14 @@ export function App() {
         {/* Work Experience & Field Track Record */}
         <ExperienceTimeline />
 
-        {/* Certificates & Continued Learning */}
-        <Certificates />
-
         {/* Flagship & Systems Projects with Filter Tabs & Slide-over Drawer */}
         <ProjectsSection />
 
         {/* Empirical Research Paper Explorer (Urban Coexistence Study N=406) */}
         <ResearchExplorer />
+
+        {/* Certificates & Continued Learning */}
+        <Certificates />
 
         {/* Interactive Terminal Command HUD */}
         <TerminalHUD />

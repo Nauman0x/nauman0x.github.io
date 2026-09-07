@@ -6,7 +6,7 @@ const ACCENTS = ['#FFC300', '#8FD14F', '#FF5FA2', '#4D7CFE'];
 
 export const Certificates: React.FC = () => {
   return (
-    <section className="py-24 bg-[#F5F0E4] border-t-[3px] border-black relative">
+    <section id="certificates" className="py-24 bg-[#F5F0E4] border-t-[3px] border-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex items-center gap-2 font-mono text-xs text-black uppercase tracking-widest mb-3 font-bold">
