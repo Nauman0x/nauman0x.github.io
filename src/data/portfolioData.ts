@@ -271,7 +271,7 @@ export const PROJECTS: Project[] = [
     id: 'solid-waste-management',
     title: 'Solid Waste Management Initiative',
     subtitle: 'Campus-Wide Waste Segregation & ML Trash Classification',
-    category: 'games-vision',
+    category: 'automation',
     tags: ['Machine Learning', 'Computer Vision', 'Waste Segregation', 'Data Analysis', 'Sustainability'],
     description: 'Led a waste segregation initiative in the Information Technology University cafeteria, pairing a redesigned multi-bin dustbin system with a custom-trained ML model for trash detection and classification. Tracked disposal patterns to optimize recycling processes and measured the initiative’s real-world impact through data analysis.',
     metrics: [
