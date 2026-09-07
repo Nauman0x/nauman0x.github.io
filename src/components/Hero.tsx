@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, Bot, Sparkles, ShieldCheck, Activity, UserRound, Zap, ArrowUpRight, TrendingUp } from 'lucide-react';
+import { Reveal } from './Reveal';
 
 const STAR_CLIP =
   'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
@@ -9,7 +10,7 @@ export const Hero: React.FC = () => {
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Accolade ribbon pills */}
-        <div className="flex flex-wrap items-center gap-2.5 mb-8">
+        <Reveal className="flex flex-wrap items-center gap-2.5 mb-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border-[3px] border-black text-xs font-mono text-black shadow-[2px_2px_0_0_#000000]">
             <Award className="h-3.5 w-3.5 text-[#FF5FA2]" />
             <span className="font-bold">WINNER &middot; SOFTEC &rsquo;26 NATIONAL AI HACKATHON</span>
@@ -25,11 +26,11 @@ export const Hero: React.FC = () => {
             <TrendingUp className="h-3.5 w-3.5 text-[#8FD14F]" />
             <span className="font-bold">7,075 AUTOMATION RUNS &middot; 99.7% SUCCESS RATE</span>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
           {/* Left: Name-forward heading */}
-          <div className="lg:col-span-8">
+          <Reveal delay={80} className="lg:col-span-8">
             {/* Open-to-work tag */}
             <div className="inline-flex items-center gap-1.5 px-3 py-1 mb-4 bg-[#FFC300] border-2 border-black text-[11px] font-mono font-bold text-black -rotate-2 shadow-[2px_2px_0_0_#000000]">
               <Zap className="h-3.5 w-3.5 fill-black" />
@@ -43,7 +44,7 @@ export const Hero: React.FC = () => {
               >
                 NAUMAN
               </span>
-              <span className="inline-block text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tight bg-[#FFC300] border-[3px] border-black px-3 -mt-3 shadow-[6px_6px_0_0_#000000]">
+              <span className="inline-block text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tight bg-[#FFC300] border-[3px] border-black px-3 mt-2 shadow-[6px_6px_0_0_#000000]">
                 ARIF.
               </span>
             </h1>
@@ -93,10 +94,10 @@ export const Hero: React.FC = () => {
                 <span>HIRE ME</span>
               </a>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right: Photo card (swap placeholder for a real photo anytime) */}
-          <div className="lg:col-span-4 flex justify-center lg:justify-end">
+          <Reveal delay={160} className="lg:col-span-4 flex justify-center lg:justify-start">
             <div className="relative rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="bg-black border-[3px] border-black shadow-[8px_8px_0_0_#000000] p-3 pb-5 w-56 sm:w-64">
                 <div className="aspect-[4/5] w-full bg-[#4D7CFE] border-[3px] border-black flex items-center justify-center overflow-hidden">
@@ -121,11 +122,11 @@ export const Hero: React.FC = () => {
                 <span className="font-mono text-[9px] font-black text-black text-center leading-tight -rotate-12">2x<br />NATL<br />WINNER</span>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* Real-time System Telemetry HUD Bar */}
-        <div className="bg-white border-[3px] border-black shadow-[6px_6px_0_0_#000000] p-4 sm:p-5 grid grid-cols-2 md:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x-2 divide-black/10 mt-10">
+        <Reveal delay={240} className="bg-white border-[3px] border-black shadow-[6px_6px_0_0_#000000] p-4 sm:p-5 grid grid-cols-2 md:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x-2 divide-black/10 mt-10">
           <div className="px-3 pt-2 md:pt-0">
             <div className="text-[11px] font-mono text-[#FF5FA2] uppercase tracking-wider flex items-center gap-1.5 mb-1 font-bold">
               <Activity className="h-3.5 w-3.5" />
@@ -164,7 +165,7 @@ export const Hero: React.FC = () => {
             <div className="text-sm sm:text-base font-mono font-bold text-black">2x National Winner</div>
             <div className="text-[11px] font-mono text-[#5C5648]">SOFTEC '25 &amp; '26</div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

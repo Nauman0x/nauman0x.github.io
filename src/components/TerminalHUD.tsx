@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Terminal, CornerDownLeft } from 'lucide-react';
+import { Reveal } from './Reveal';
 
 interface CommandOutput {
   command: string;
@@ -23,12 +24,17 @@ export const TerminalHUD: React.FC = () => {
   ]);
 
   const terminalEndRef = useRef<HTMLDivElement>(null);
+  const isFirstRender = useRef(true);
 
   const scrollToBottom = () => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   };
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     scrollToBottom();
   }, [history]);
 
@@ -148,16 +154,18 @@ export const TerminalHUD: React.FC = () => {
     <section id="console" className="py-24 bg-black border-t-[3px] border-black relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex items-center gap-2 font-mono text-xs text-[#8FD14F] font-bold uppercase tracking-widest mb-3">
-          <Terminal className="h-4 w-4" />
-          <span>INTERACTIVE COMMAND INTERFACE // 05</span>
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4 font-heading">
-          Terminal Console Emulator
-        </h2>
-        <p className="text-sm sm:text-base text-[#B8B0A0] max-w-2xl font-normal leading-relaxed mb-8">
-          Inspect production logs, querying system credentials, award history, and architectural principles directly from the CLI.
-        </p>
+        <Reveal>
+          <div className="flex items-center gap-2 font-mono text-xs text-[#8FD14F] font-bold uppercase tracking-widest mb-3">
+            <Terminal className="h-4 w-4" />
+            <span>INTERACTIVE COMMAND INTERFACE // 05</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4 font-heading">
+            Terminal Console Emulator
+          </h2>
+          <p className="text-sm sm:text-base text-[#B8B0A0] max-w-2xl font-normal leading-relaxed mb-8">
+            Inspect production logs, querying system credentials, award history, and architectural principles directly from the CLI.
+          </p>
+        </Reveal>
 
         {/* Command Pill Shortcuts */}
         <div className="flex flex-wrap items-center gap-2 mb-4">

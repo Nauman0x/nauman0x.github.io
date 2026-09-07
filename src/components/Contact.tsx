@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Clock, MapPin, Mail, Send, ArrowUp } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
+import { Reveal } from './Reveal';
 
 const EMAIL = 'naumanarif432@gmail.com';
 
@@ -19,21 +20,24 @@ export const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-24 bg-[#EDE9F8] border-t-[3px] border-black relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="inline-block px-3 py-1 mb-4 bg-[#FF5FA2] border-2 border-black text-[10px] font-mono font-bold text-black -rotate-2 shadow-[2px_2px_0_0_#000000]">
-          THE LAST PAGE
-        </div>
+        <Reveal>
+          <div className="inline-block px-3 py-1 mb-4 bg-[#FF5FA2] border-2 border-black text-[10px] font-mono font-bold text-black -rotate-2 shadow-[2px_2px_0_0_#000000]">
+            THE LAST PAGE
+          </div>
 
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none mb-4 font-heading">
-          <span className="text-black">LET&rsquo;S </span>
-          <span className="text-transparent" style={{ WebkitTextStroke: '2px #111111' }}>TALK.</span>
-        </h2>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none mb-4 font-heading">
+            <span className="text-black">LET&rsquo;S </span>
+            <span className="text-transparent" style={{ WebkitTextStroke: '2px #111111' }}>TALK.</span>
+          </h2>
 
-        <p className="text-sm sm:text-base text-[#3A342A] max-w-xl mb-12">
-          Got something you want built, or half-built and stuck? Write it down below &mdash; I read everything.
-        </p>
+          <p className="text-sm sm:text-base text-[#3A342A] max-w-xl mb-12">
+            Got something you want built, or half-built and stuck? Write it down below &mdash; I read everything.
+          </p>
+        </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8 items-start">
           {/* Note form */}
+          <Reveal>
           <form
             onSubmit={handleSubmit}
             className="bg-white border-[3px] border-black shadow-[8px_8px_0_0_#000000] p-6 sm:p-8"
@@ -92,9 +96,10 @@ export const Contact: React.FC = () => {
               OPENS YOUR MAIL APP &middot; NOTHING STORED HERE
             </p>
           </form>
+          </Reveal>
 
           {/* Side info */}
-          <div className="space-y-6">
+          <Reveal delay={120} className="space-y-6">
             <div className="bg-black border-[3px] border-black shadow-[6px_6px_0_0_#FFC300] p-6">
               <div className="text-xs font-mono font-bold text-[#FFC300] uppercase tracking-widest mb-4">The Basics</div>
               <div className="space-y-3 text-sm text-white font-mono">
@@ -165,7 +170,7 @@ export const Contact: React.FC = () => {
               <ArrowUp className="h-4 w-4" />
               <span>BACK TO THE TOP</span>
             </a>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

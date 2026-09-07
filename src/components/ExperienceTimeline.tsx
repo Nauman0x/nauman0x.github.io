@@ -2,6 +2,7 @@ import React from 'react';
 import { EXPERIENCES } from '../data/portfolioData';
 import { Briefcase, Calendar, MapPin, CheckCircle2, ExternalLink } from 'lucide-react';
 import { CompanyLogo } from './CompanyLogo';
+import { Reveal } from './Reveal';
 
 const ACCENTS = ['#4D7CFE', '#FF5FA2', '#8FD14F'];
 
@@ -10,24 +11,26 @@ export const ExperienceTimeline: React.FC = () => {
     <section id="experience" className="py-24 bg-white border-t-[3px] border-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex items-center gap-2 font-mono text-xs text-black uppercase tracking-widest mb-3 font-bold">
-          <Briefcase className="h-4 w-4" />
-          <span>PRODUCTION WORK HISTORY // 01</span>
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight mb-4 font-heading">
-          Experience &amp; Field Track Record
-        </h2>
-        <p className="text-sm sm:text-base text-[#3A342A] max-w-2xl font-normal leading-relaxed mb-12">
-          Engineering scalable conversational architectures, robust CRM/payment integrations, and automated operational pipelines for international companies.
-        </p>
+        <Reveal>
+          <div className="flex items-center gap-2 font-mono text-xs text-black uppercase tracking-widest mb-3 font-bold">
+            <Briefcase className="h-4 w-4" />
+            <span>PRODUCTION WORK HISTORY // 01</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight mb-4 font-heading">
+            Experience &amp; Field Track Record
+          </h2>
+          <p className="text-sm sm:text-base text-[#3A342A] max-w-2xl font-normal leading-relaxed mb-12">
+            Engineering scalable conversational architectures, robust CRM/payment integrations, and automated operational pipelines for international companies.
+          </p>
+        </Reveal>
 
         {/* Timeline Stack */}
         <div className="space-y-6">
           {EXPERIENCES.map((exp, idx) => {
             const accent = ACCENTS[idx % ACCENTS.length];
             return (
+              <Reveal key={idx} delay={idx * 100}>
               <div
-                key={idx}
                 style={{ borderLeftColor: accent, borderLeftWidth: 8, boxShadow: `6px 6px 0px 0px ${accent}` }}
                 className="p-6 sm:p-8 bg-[#EDE9F8] border-[3px] border-black transition-all duration-200 group"
               >
@@ -90,6 +93,7 @@ export const ExperienceTimeline: React.FC = () => {
                   ))}
                 </div>
               </div>
+              </Reveal>
             );
           })}
         </div>

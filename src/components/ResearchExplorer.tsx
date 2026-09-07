@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RESEARCH_PAPERS, type ResearchPaper } from '../data/portfolioData';
 import { BookOpen, FileText, CheckCircle, ExternalLink } from 'lucide-react';
+import { Reveal } from './Reveal';
 
 const ACCENTS = ['#8FD14F', '#FF5FA2'];
 
@@ -152,20 +153,24 @@ export const ResearchExplorer: React.FC = () => {
     <section id="research" className="py-24 relative bg-[#EDE9F8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex items-center gap-2 font-mono text-xs text-black uppercase tracking-widest mb-3 font-bold">
-          <BookOpen className="h-4 w-4" />
-          <span>EMPIRICAL RESEARCH &amp; STATISTICAL STUDIES // 03</span>
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight mb-4 font-heading">
-          Research &amp; Policy Modeling
-        </h2>
-        <p className="text-sm sm:text-base text-[#3A342A] max-w-3xl font-normal leading-relaxed mb-12">
-          Bridging technical software systems with empirical social science &mdash; statistical, mixed-methods studies on public perception, behavioral psychology, and policy intervention.
-        </p>
+        <Reveal>
+          <div className="flex items-center gap-2 font-mono text-xs text-black uppercase tracking-widest mb-3 font-bold">
+            <BookOpen className="h-4 w-4" />
+            <span>EMPIRICAL RESEARCH &amp; STATISTICAL STUDIES // 03</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight mb-4 font-heading">
+            Research &amp; Policy Modeling
+          </h2>
+          <p className="text-sm sm:text-base text-[#3A342A] max-w-3xl font-normal leading-relaxed mb-12">
+            Bridging technical software systems with empirical social science &mdash; statistical, mixed-methods studies on public perception, behavioral psychology, and policy intervention.
+          </p>
+        </Reveal>
 
         <div className="space-y-10">
           {RESEARCH_PAPERS.map((paper, idx) => (
-            <ResearchPaperCard key={paper.id} paper={paper} accent={ACCENTS[idx % ACCENTS.length]} />
+            <Reveal key={paper.id} delay={idx * 100}>
+              <ResearchPaperCard paper={paper} accent={ACCENTS[idx % ACCENTS.length]} />
+            </Reveal>
           ))}
         </div>
       </div>

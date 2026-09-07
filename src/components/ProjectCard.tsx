@@ -57,7 +57,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
         transition: isHovered ? 'transform 0.1s ease-out' : 'transform 0.35s ease-out',
         boxShadow: isHovered ? `6px 6px 0px 0px ${accent}` : '4px 4px 0px 0px #000000',
       }}
-      className="cursor-pointer group relative flex flex-col justify-between bg-white border-[3px] border-black p-6 transition-all duration-200 overflow-hidden"
+      className="cursor-pointer group relative flex flex-col justify-between bg-white border-[3px] border-black p-6 transition-all duration-200 overflow-hidden h-full"
     >
       <div>
         {/* Card Header Info */}

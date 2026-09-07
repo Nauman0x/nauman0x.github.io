@@ -3,6 +3,7 @@ import { PROJECTS, type Project } from '../data/portfolioData';
 import { ProjectCard } from './ProjectCard';
 import { ProjectDrawer } from './ProjectDrawer';
 import { Layers } from 'lucide-react';
+import { Reveal } from './Reveal';
 
 export const ProjectsSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'flagship' | 'voice' | 'games-vision' | 'automation'>('all');
@@ -24,7 +25,7 @@ export const ProjectsSection: React.FC = () => {
     <section id="systems" className="py-24 relative bg-[#EDE9F8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <Reveal className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <div className="flex items-center gap-2 font-mono text-xs text-black uppercase tracking-widest mb-2 font-bold">
               <Layers className="h-4 w-4" />
@@ -51,16 +52,17 @@ export const ProjectsSection: React.FC = () => {
               </button>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onSelect={setSelectedProject}
-            />
+          {filteredProjects.map((project, idx) => (
+            <Reveal key={project.id} delay={idx * 60}>
+              <ProjectCard
+                project={project}
+                onSelect={setSelectedProject}
+              />
+            </Reveal>
           ))}
         </div>
       </div>
