@@ -46,13 +46,6 @@ export const Navbar: React.FC = () => {
           </div>
         </a>
 
-        {/* Live Status Badge */}
-        <div className="hidden xl:flex shrink-0 items-center gap-2 px-3 py-1 rounded-full bg-[#8FD14F] border-[3px] border-black text-[11px] font-mono text-black shadow-[2px_2px_0_0_#000000] whitespace-nowrap">
-          <span className="h-2 w-2 rounded-full bg-black animate-ping shrink-0" />
-          <span className="h-2 w-2 rounded-full bg-black -ml-4 shrink-0" />
-          <span className="font-bold">CONTRACT / FULL-TIME READY</span>
-        </div>
-
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center gap-1.5 xl:gap-2 font-mono text-xs shrink-0">
           {navLinks.map((link) => (

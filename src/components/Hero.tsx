@@ -48,7 +48,7 @@ export const Hero: React.FC = () => {
             {/* Open-to-work tag */}
             <div className="inline-flex items-center gap-1.5 px-3 py-1 mb-4 bg-[#FFC300] border-2 border-black text-[11px] font-mono font-bold text-black -rotate-2 shadow-[2px_2px_0_0_#000000]">
               <Zap className="h-3.5 w-3.5 fill-black" />
-              <span>OPEN FOR WORK &mdash; LAHORE &rarr; WORLDWIDE</span>
+              <span>OPEN FOR WORK &mdash; WORLDWIDE</span>
             </div>
 
             <h1 className="leading-[0.95] mb-4 font-heading">
