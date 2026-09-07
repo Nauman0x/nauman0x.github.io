@@ -25,14 +25,14 @@ export function App() {
         {/* Real Production Metrics Ribbon */}
         <MetricsRibbon />
 
+        {/* Work Experience & Field Track Record */}
+        <ExperienceTimeline />
+
         {/* Flagship & Systems Projects with Filter Tabs & Slide-over Drawer */}
         <ProjectsSection />
 
         {/* Interactive Voice Call & Speech Lab */}
         <VoiceStudio />
-
-        {/* Work Experience & Field Track Record */}
-        <ExperienceTimeline />
 
         {/* Empirical Research Paper Explorer (Urban Coexistence Study N=406) */}
         <ResearchExplorer />

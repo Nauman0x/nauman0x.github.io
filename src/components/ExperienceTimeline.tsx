@@ -1,6 +1,6 @@
 import React from 'react';
 import { EXPERIENCES } from '../data/portfolioData';
-import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2, ExternalLink } from 'lucide-react';
 
 export const ExperienceTimeline: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ export const ExperienceTimeline: React.FC = () => {
         {/* Section Header */}
         <div className="flex items-center gap-2 font-mono text-xs text-[#9D72E8] uppercase tracking-widest mb-3">
           <Briefcase className="h-4 w-4" />
-          <span>PRODUCTION WORK HISTORY // 04</span>
+          <span>PRODUCTION WORK HISTORY // 01</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
           Experience & Field Track Record
@@ -30,8 +30,20 @@ export const ExperienceTimeline: React.FC = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-[#B794F4] transition-colors">
                     {exp.role}
                   </h3>
-                  <div className="text-sm font-mono text-[#9D72E8] font-medium mt-0.5">
-                    {exp.company}
+                  <div className="text-sm font-mono text-[#9D72E8] font-medium mt-0.5 flex items-center gap-1.5">
+                    {exp.website ? (
+                      <a
+                        href={exp.website}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:underline flex items-center gap-1 text-[#B794F4]"
+                      >
+                        <span>{exp.company}</span>
+                        <ExternalLink className="h-3.5 w-3.5 text-[#9D72E8]" />
+                      </a>
+                    ) : (
+                      <span>{exp.company}</span>
+                    )}
                   </div>
                 </div>
 

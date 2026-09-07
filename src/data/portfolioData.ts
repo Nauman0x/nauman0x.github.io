@@ -31,6 +31,7 @@ export interface AudioSample {
 export interface Experience {
   role: string;
   company: string;
+  website?: string;
   location: string;
   period: string;
   highlights: string[];
@@ -50,7 +51,8 @@ export const EXPERIENCES: Experience[] = [
   {
     role: 'Backend AI and Automation Engineer',
     company: 'Global Health',
-    location: 'Portugal (Remote)',
+    website: 'https://www.myglobalhealth.online/',
+    location: 'Portugal & Brazil (Remote)',
     period: 'Nov 2025 – Present',
     highlights: [
       'Built multi-channel outbound and lifecycle sequences across email and WhatsApp in n8n and Make, integrating 5+ third-party APIs via webhooks and JSON mapping.',
@@ -229,7 +231,8 @@ export const PROJECTS: Project[] = [
       'Google Meet & Calendar API appointment synchronization'
     ],
     links: {
-      github: 'https://github.com/Nauman0x/Wix-Portfolio'
+      github: 'https://github.com/Nauman0x/Wix-Portfolio',
+      live: 'https://www.myglobalhealth.online/'
     },
     featured: true
   },

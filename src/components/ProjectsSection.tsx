@@ -28,7 +28,7 @@ export const ProjectsSection: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 font-mono text-xs text-[#9D72E8] uppercase tracking-widest mb-2">
               <Layers className="h-4 w-4" />
-              <span>PRODUCTION CATALOG // 01</span>
+              <span>PRODUCTION CATALOG // 02</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
               Selected Systems & Deployments
