@@ -6,6 +6,7 @@ import { MetricsRibbon } from './components/MetricsRibbon';
 import { ProjectsSection } from './components/ProjectsSection';
 import { VoiceStudio } from './components/VoiceStudio';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
+import { Certificates } from './components/Certificates';
 import { ResearchExplorer } from './components/ResearchExplorer';
 import { TerminalHUD } from './components/TerminalHUD';
 import { Contact } from './components/Contact';
@@ -41,6 +42,9 @@ export function App() {
 
         {/* Work Experience & Field Track Record */}
         <ExperienceTimeline />
+
+        {/* Certificates & Continued Learning */}
+        <Certificates />
 
         {/* Flagship & Systems Projects with Filter Tabs & Slide-over Drawer */}
         <ProjectsSection />

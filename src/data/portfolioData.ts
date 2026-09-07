@@ -18,6 +18,15 @@ export interface Project {
   award?: string;
 }
 
+export interface Certificate {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  credentialId?: string;
+  verifyLink: string;
+}
+
 export interface AudioSample {
   id: string;
   title: string;
@@ -257,6 +266,54 @@ export const PROJECTS: Project[] = [
       github: 'https://github.com/Nauman0x/Prompt-Portfolio',
       audio: 'https://drive.google.com/drive/folders/1yhcmfIIaLUbjgfetupg0k35NIRv8iz_w?usp=drive_link'
     }
+  },
+  {
+    id: 'solid-waste-management',
+    title: 'Solid Waste Management Initiative',
+    subtitle: 'Campus-Wide Waste Segregation & ML Trash Classification',
+    category: 'games-vision',
+    tags: ['Machine Learning', 'Computer Vision', 'Waste Segregation', 'Data Analysis', 'Sustainability'],
+    description: 'Led a waste segregation initiative in the Information Technology University cafeteria, pairing a redesigned multi-bin dustbin system with a custom-trained ML model for trash detection and classification. Tracked disposal patterns to optimize recycling processes and measured the initiative’s real-world impact through data analysis.',
+    metrics: [
+      'Custom ML model for real-time trash detection & classification',
+      'Multi-bin segregation system deployed campus-wide',
+      'Data-driven tracking of waste disposal & recycling patterns'
+    ],
+    architecture: [
+      'Trash image classification model for waste categorization',
+      'Cafeteria-wide dustbin redesign for source segregation',
+      'Disposal pattern tracking & recycling-rate data analysis'
+    ],
+    links: {
+      live: 'https://docs.google.com/presentation/d/1eRsKsU0LQcJHZTAQbt8nI3sr3uC1IzYRd7zB7PrC-6o/edit'
+    }
+  }
+];
+
+export const CERTIFICATES: Certificate[] = [
+  {
+    id: 'deloitte-data-analytics',
+    title: 'Deloitte Australia — Data Analytics Job Simulation',
+    issuer: 'Forage',
+    date: 'Apr 2025',
+    credentialId: 'ENbzgAXoEWa7gMsXE',
+    verifyLink: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_CNk9SuCKDSkMssxXx_1744137529910_completion_certificate.pdf'
+  },
+  {
+    id: 'excel-basics',
+    title: 'Excel Basics for Data Analysis',
+    issuer: 'IBM iX · Coursera',
+    date: 'Mar 2025',
+    credentialId: 'JCKVYEZK83TT',
+    verifyLink: 'https://www.coursera.org/account/accomplishments/verify/JCKVYEZK83TT'
+  },
+  {
+    id: 'intro-ds-python',
+    title: 'Introduction to Data Science in Python',
+    issuer: 'University of Michigan · Coursera',
+    date: 'Feb 2025',
+    credentialId: '2HV1G4D4ORWX',
+    verifyLink: 'https://www.coursera.org/account/accomplishments/verify/2HV1G4D4ORWX'
   }
 ];
 
