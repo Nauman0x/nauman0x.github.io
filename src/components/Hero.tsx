@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Bot, Sparkles, ShieldCheck, Activity, UserRound, Zap, ArrowUpRight } from 'lucide-react';
+import { Award, Bot, Sparkles, ShieldCheck, Activity, UserRound, Zap, ArrowUpRight, TrendingUp } from 'lucide-react';
 
 const STAR_CLIP =
   'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
@@ -19,6 +19,11 @@ export const Hero: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border-[3px] border-black text-xs font-mono text-black shadow-[2px_2px_0_0_#000000]">
             <Sparkles className="h-3.5 w-3.5 text-[#4D7CFE]" />
             <span className="font-bold">WINNER &middot; SOFTEC &rsquo;25 GAME DEV COMPETITION</span>
+          </div>
+
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border-[3px] border-black text-xs font-mono text-black shadow-[2px_2px_0_0_#000000]">
+            <TrendingUp className="h-3.5 w-3.5 text-[#8FD14F]" />
+            <span className="font-bold">7,075 AUTOMATION RUNS &middot; 99.7% SUCCESS RATE</span>
           </div>
         </div>
 
